@@ -23,7 +23,7 @@ As of version 5.11, each of these parts are now versioned independently.  This
 allows the Core to stay unchanged, while the more dynamic Platform Extensions 
 continue to evolve as needed.</p>
 
-<h2>Separate Versions Policy (> OVAL 5.11_)</h2>
+<h2>Separate Versions Policy (> OVAL 5.11)</h2>
 
 <p>The Core versioning will remain as it always has been.  That is, the versions 
 will continue to look like:
