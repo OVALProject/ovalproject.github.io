@@ -36,5 +36,5 @@ approval of the OVAL Board.</p>
 <h2>OVAL Language Versioning Policy (Prior to OVAL 5.11)</h2>
 
 <p>The OVAL Language Versioning Policy used prior to OVAL 5.11 was archived 
-on November 30, 2014, but, is available <a href="old_policy">here</a> for 
+on November 30, 2014, but, is available <a href="oldpolicy">here</a> for 
 informational purposes.</p>
