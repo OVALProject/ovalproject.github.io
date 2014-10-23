@@ -31,7 +31,7 @@ approval of the OVAL Board.</p>
 <h2>OVAL Language Versioning Policy</h2>
 
 <p>Starting with the 5.11 release, the OVAL Language now uses the policy described
-<a href="doumentation/policy/versioning">here</a></p>
+<a href="./">here</a></p>
 
 <h2>OVAL Language Versioning Policy (Prior to OVAL 5.11)</h2>
 
