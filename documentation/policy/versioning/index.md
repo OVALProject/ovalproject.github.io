@@ -4,7 +4,8 @@ layout: flat
 ---
 
 <div class="alert alert-info">
-  <p><strong>Updated Versioning Policy:</strong> As of the 5.11 release of OVAL, a new versioning policy is in use (described below).  Additional background information 
+  <p><strong>Updated Versioning Policy:</strong> As of the 5.11 release of OVAL, 
+a new versioning policy is in use (described below).  Additional background information 
 about this change is available <a href="policy_update">here</a>.</p>
 </div>
 
@@ -12,79 +13,79 @@ about this change is available <a href="policy_update">here</a>.</p>
 OVAL Language are versioned.  This includes the methods for determining whether 
 a new revision will require a major version change, minor version change, or a 
 version update, and how version information is represented and conveyed in the 
-OVAL Language.  It also explains how each of the different parts of the Language, 
-the core XML Schemas as well as the platform extensions, are versioned.</p>
+OVAL Language.  It also explains how each of the different parts of the Language(
+the Core and Platform Extension models) are versioned.</p>
 
 <p>In versions of the Language previous to 5.11, all of the parts of the Language, 
-including both the core schema as well as the platform extensions, were versioned 
+including both the Core and the Platform Extensions, were versioned 
 in one collection, receiving a single version number (such as 5.8, 5.10.1, etc.).  
 As of version 5.11, each of these parts are now versioned independently.  This 
-allows the core schemas to stay unchanged, while the more dynamic platform extensions 
+allows the Core to stay unchanged, while the more dynamic Platform Extensions 
 continue to evolve as needed.</p>
 
 <h2>Separate Versions Policy (> OVAL 5.11_)</h2>
 
-<p>The core schema, which contains the basic building block for the OVAL Language, 
-including oval-common, oval-definitions, oval-system-characteristics, and other related 
-schema, are versioned separate from each of the platform extensions starting 
-with the 5.11 release of OVAL.  The platform extensions are then versioned 
-separately from the core.  Since the core schema is quite stable, the revision 
-cycle for the core is very infrequent, while it is expected that the platform 
-schemas will be revised regularly.</p>
+<p>The Core versioning will remain as it always has been.  That is, the versions 
+will continue to look like:
 
-<p>The version numbers OVAL versions that use this policy will follow the following pattern:</p>
+<p><div class="well well">MAJOR.MINOR.UPDATE</div></p>
 
-<p><strong>
+<p>The version numbers for each of the Platform Extensions, however, will
+now use a longer format that specifies the version number of both the 
+Core from which the extension is built as well as the version for that 
+extension.  The format will look like:</p>
+
+<p><<div class="well">>
 CORE-MAJOR.CORE-MINOR.CORE-UPDATE:PLAT-MAJOR.PLAT-MINOR.PLAT-UPDATE
-</strong></p>
+</div></p>
 
-<p>Where the first 3 version numbers correspond to the core schema version from 
-which the platform extension is built and the 3 version numbers following the 
-colon (:) represent the platform extension’s version.  For example, the version 
-5.11.0:5.11 would represent the initial version of a platform built off of the 
-5.11 version of the core OVAL schemas.  Note that the trailing UPDATE version 
-number can be omitted when not necessary.</p>
+<p>Where the first 3 version numbers correspond to the Core version from 
+which the Platform Extension is built and the 3 version numbers following the 
+colon (:) represent the Platform Extension’s version.  For example, the version 
+5.11.0:5.11 would represent the initial version of an extension built off of the 
+5.11 version of the OVAL Core.  Note that the trailing UPDATE version 
+number can be omitted when it is "0"</p>
 
 <p>It is expected that for higher level usages of OVAL (for example SCAP) a “rolled up” 
-version of the various core and platform schemas would be created to create a 
+version of the various Core and Platform Extensions would be created to create a 
 snapshot of OVAL for purposes of things like validation.</p>
 
 <h2>Versioning Scheme</h2>
-A three-component version identifier is used to track the evolution of the OVAL 
-Language over time. The description below applies to both the core and platform 
-schemas final 3 numbers.</p>
 
-<p>Each component of the version identifier is a numeric value and corresponds 
+<p>Both the Core and the Platform Extensions are constructed using either one or 
+two three component identifiers.  The following describes how each of those 
+three component identifiers are constructed.</p>
+
+<p>Each component of the identifier is a numeric value and corresponds 
 to one of the three release types — "Major", "Minor", and "Update" — each of 
 which is subject to the <a href="../revisionprocess">OVAL Language Revision Policy</a>. 
-The complete version identifier has the following form: MAJOR.MINOR.UPDATE. 
+The complete identifier uses the MAJOR.MINOR.UPDATE as stated above. 
 For example, "5.10.1".</p>
 
 <p>These three different types of OVAL releases and their relationship with 
-the OVAL Language’s version identifier are described below:</p>
+the OVAL Language’s three component identifier are described below:</p>
 
 <h3>Major Release</h3>
 
 <p>A major release is for adding features that require breaking
-<a href="../backwardscompat">backward 
-compatibility</a> with previous versions of the OVAL Language or represent 
-fundamental changes to concepts in the OVAL Language. For a major release, 
+<a href="../backwardscompat">backward compatibility</a> with previous versions or 
+represent fundamental changes to concepts. For a major release, 
 the MAJOR component must be incremented by one and the MINOR and UPDATE components 
 must be set to zero.</p>
 
 <h4>Example</h4>
 
 <p>In OVAL 4.2, OVAL Objects and OVAL States were directly embedded in OVAL Tests. 
-The community decided that OVAL Test should not directly contain OVAL Objects 
+The community decided that an OVAL Test should not directly contain OVAL Objects 
 and OVAL States but rather reference them. This change would break backward 
-compatibility with previous versions of the OVAL Language. As a result, OVAL 5.0 was created.</p>
+compatibility with previous versions of the OVAL Language. As a result, OVAL 5.0 
+was created.</p>
 
 <h3>Minor Release</h3>
 
-<p>A minor release is for adding features to the OVAL Language that do not break 
-backward compatibility with previous versions of the OVAL Language. For a minor 
-release, the MINOR component must be incremented by one and the UPDATE component 
-must be set to zero.</p>
+<p>A minor release is for adding features that do not break backward compatibility 
+with previous versions. For a minor release, the MINOR component must be incremented 
+by one and the UPDATE component must be set to zero.</p>
 
 <h4>Example</h4>
 
@@ -110,7 +111,7 @@ outweighs any negative impact.</li>
 <h3>Update Release</h3>
 
 <p>An update release may only be initiated to address critical defects in a 
-version of the OVAL Language that affects its usability. Fixes may break backward 
+version that affects its usability. Fixes may break backward 
 compatibility if necessary. New functionality outside of what was intended is 
 not permitted. However, once an update release is agreed to, other non-critical 
 fixes and clarifications may be addressed. When an update version change is made, 
