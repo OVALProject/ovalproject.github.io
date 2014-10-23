@@ -3,10 +3,6 @@ title: Policy
 layout: flat
 ---
 
-<div class="alert alert-danger">
-  <p><strong>UNDER DEVELOPMENT:</strong> This guide is still under development and the information below may be incomplete.</p>
-</div>
-
 <div class="row">
   <div class="col-md-6">
 
