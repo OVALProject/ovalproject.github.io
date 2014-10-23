@@ -14,13 +14,13 @@ layout: flat
 
     <div class="well">
       <h4><a href="idioms">Idioms</a></h4>
-      <p>Frequently-used OVAL Language patterns.</p>
+      <p>Frequently-used OVAL Language patterns</p>
       <a class="btn btn-primary" href="idioms">Go »</a>
     </div>
 
     <div class="well">
       <h4><a href="security">Security Considerations</a></h4>
-      <p>Important security considerations for OVAL content.</p>
+      <p>Important security considerations for OVAL content</p>
       <a class="btn btn-primary" href="security">Go »</a>
     </div>
 
@@ -29,7 +29,7 @@ layout: flat
 
     <div class="well">
       <h4><a href="utilities">Utilities</a></h4>
-      <p>Tools for working with OVAL.</p>
+      <p>Tools for working with OVAL</p>
       <a class="btn btn-primary" href="utilities">Go »</a>
     </div>
 
@@ -37,6 +37,12 @@ layout: flat
       <h4><a href="validation">Validation</a></h4>
       <p>Validating OVAL Content</p>
       <a class="btn btn-primary" href="validation">Go »</a>
+    </div>
+
+    <div class="well">
+      <h4><a href="policy">Policy & Procedures</a></h4>
+      <p>Information on OVAL's policies nad procedures</p>
+      <a class="btn btn-primary" href="policy">Go »</a>
     </div>
 
   </div>
