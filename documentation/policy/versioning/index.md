@@ -3,9 +3,10 @@ title: Versioning Policy
 layout: flat
 ---
 
-<div class="alert alert-tip">
-  <p><strong>Updated Versioning Policy:</strong> As of the 5.11 release of OVAL, a new versioning policy is in use (described below).  For additional background and context
-regarding the new policy, please <a href="policy_update">click here</a>.</p>
+<div class="flash">
+  <a href="policy_update" class="minibutton primary flash-action">Background Information</a>
+  <p><strong>Updated Versioning Policy:</strong> As of the 5.11 release of OVAL, a new versioning policy is in use (described below).  Additional background information 
+about this change is available by pressing the button.</p>
 </div>
 
 <p>This document details the methodology by which the different parts of the 
@@ -56,7 +57,7 @@ schemas final 3 numbers.</p>
 
 <p>Each component of the version identifier is a numeric value and corresponds 
 to one of the three release types — "Major", "Minor", and "Update" — each of 
-which is subject to the <a href="documentation/policy/revisionprocess">OVAL Language Revision Policy</a>. 
+which is subject to the <a href="../revisionprocess">OVAL Language Revision Policy</a>. 
 The complete version identifier has the following form: MAJOR.MINOR.UPDATE. 
 For example, "5.10.1".</p>
 
@@ -66,7 +67,7 @@ the OVAL Language’s version identifier are described below:</p>
 <h3>Major Release</h3>
 
 <p>A major release is for adding features that require breaking
-<a href="documentation/policy/backwardscompat">backward 
+<a href="../backwardscompat">backward 
 compatibility</a> with previous versions of the OVAL Language or represent 
 fundamental changes to concepts in the OVAL Language. For a major release, 
 the MAJOR component must be incremented by one and the MINOR and UPDATE components 
@@ -136,4 +137,4 @@ for adding the entity. As a result, OVAL 5.10.1 was released to fix this defect.
 
 <p>OVAL Language constructs may be deprecated in either major or minor revisions. 
 The complete deprecation policy is detailed in the 
-<a href="documentation/policy/deprecation">OVAL Language Deprecation Policy</a>.</p>
+<a href="../deprecation">OVAL Language Deprecation Policy</a>.</p>
