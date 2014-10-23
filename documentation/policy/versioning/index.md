@@ -35,7 +35,7 @@ now use a longer format that specifies the version number of both the
 Core from which the extension is built as well as the version for that 
 extension.  The format will look like:</p>
 
-<p><<div class="well">>
+<p><div class="well">
 CORE-MAJOR.CORE-MINOR.CORE-UPDATE:PLAT-MAJOR.PLAT-MINOR.PLAT-UPDATE
 </div></p>
 
