@@ -41,7 +41,7 @@ layout: flat
 
     <div class="well">
       <h4><a href="policy">Policy & Procedures</a></h4>
-      <p>Information on OVAL's policies nad procedures</p>
+      <p>Information on OVAL's policies and procedures</p>
       <a class="btn btn-primary" href="policy">Go »</a>
     </div>
 
