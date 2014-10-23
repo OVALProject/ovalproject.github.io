@@ -3,10 +3,9 @@ title: Versioning Policy
 layout: flat
 ---
 
-<div class="flash">
-  <a href="policy_update" class="minibutton primary flash-action">Background Information</a>
+<div class="alert alert-info">
   <p><strong>Updated Versioning Policy:</strong> As of the 5.11 release of OVAL, a new versioning policy is in use (described below).  Additional background information 
-about this change is available by pressing the button.</p>
+about this change is available <a href="policy_update">here</a>.</p>
 </div>
 
 <p>This document details the methodology by which the different parts of the 
