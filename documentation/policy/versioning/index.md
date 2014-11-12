@@ -23,12 +23,23 @@ As of version 5.11, each of these parts are now versioned independently.  This
 allows the Core to stay unchanged, while the more dynamic Platform Extensions 
 continue to evolve as needed.</p>
 
-<h2>Separate Versions Policy (> OVAL 5.11)</h2>
+<h2>Separate Versions Policy (OVAL 5.11 and after)</h2>
 
 <p>The Core versioning will remain as it always has been.  That is, the versions 
-will continue to look like:
+will continue to look like:</p>
 
 <p><div class="well well">MAJOR.MINOR.UPDATE</div></p>
+
+<p>Note that the trailing UPDATE version number can be omitted when it is "0".  
+Examples of this version look like:</p>
+
+<p><div class="well well">
+	<ul>
+		<li>5.4</li>
+		<li>5.10.1</li>
+		<li>5.11</li>
+	</ul>
+</div></p>
 
 <p>The version numbers for each of the Platform Extensions, however, will
 now use a longer format that specifies the version number of both the 
@@ -44,7 +55,15 @@ which the Platform Extension is built and the 3 version numbers following the
 colon (:) represent the Platform Extension’s version.  For example, the version 
 5.11.0:5.11 would represent the initial version of an extension built off of the 
 5.11 version of the OVAL Core.  Note that the trailing UPDATE version 
-number can be omitted when it is "0"</p>
+number can be omitted when it is "0".  Examples of this look like:</p>
+
+<p><div class="well well">
+	<ul>
+		<li>5.11.0:5.11</li>
+		<li>5.11.1:5.11.2</li>
+		<li>5.11.0:5.12</li>
+	</ul>
+</div></p>
 
 <p>It is expected that for higher level usages of OVAL (for example SCAP) a “rolled up” 
 version of the various Core and Platform Extensions would be created to create a 
