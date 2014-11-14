@@ -9,4 +9,4 @@ exclude: ['Gemfile', 'Gemfile.lock', 'LICENSE', 'README.md']
 redcarpet:
     extensions: ["autolink", "fenced_code_blocks", "no_intra_emphasis", "strikethrough", "superscript", "tables", "with_toc_data"]
 
-encoding: utf-8
+encoding: UTF-8
