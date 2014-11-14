@@ -69,7 +69,7 @@ the CORE-MAJOR for each Platform Extension.  Examples of this look like:</p>
 <h2>Versioning Scheme</h2>
 
 <p>Both the Core and the Platform Extensions are constructed using component identifiers.  
-The Core uses a single three component identifier (e.g. 5.11.1) while the Platform Extensions use two, comma-separated 
+The Core uses a single three component identifier (e.g. 5.11.1) while the Platform Extensions use two, colon-separated 
 three component identifiers (e.g. 5.11.0:5.11.2). The following describes how each of those 
 three component identifiers are constructed.</p>
 
