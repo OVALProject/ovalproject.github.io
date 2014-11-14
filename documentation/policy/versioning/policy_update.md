@@ -23,8 +23,13 @@ the OVAL Language (OVAL Common, OVAL Definitions, OVAL System Characteristics,
 OVAL Results, OVAL Directives, and OVAL Variables) and individual platform 
 extension models (Android, Cisco, Linux, UNIX, Windows, etc.) would be 
 versioned independently allowing for the core models to remain relatively stable 
-while the more dynamic platform extensions are free to evolve as needed.  This 
-new versioning policy is described below and went into effect on November 30, 2014 
+while the more dynamic platform extensions are free to evolve as needed.</p>
+
+<p>It is expected that for higher level usages of OVAL (for example SCAP) a “rolled up” 
+version of the various Core and Platform Extensions would be created to create a 
+snapshot of OVAL for purposes of things like validation.</p>
+
+<p>This new versioning policy is described below and went into effect on November 30, 2014 
 with the official release of Version 5.11 of the OVAL Language and with the 
 approval of the OVAL Board.</p>
 

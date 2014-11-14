@@ -55,7 +55,8 @@ which the Platform Extension is built and the 3 version numbers following the
 colon (:) represent the Platform Extension’s version.  For example, the version 
 5.11.0:5.11 would represent the initial version of an extension built off of the 
 5.11 version of the OVAL Core.  Note that the trailing UPDATE version 
-number can be omitted when it is "0".  Examples of this look like:</p>
+number can be omitted when it is "0".  Finally, it is expected that the PLAT-MAJOR matches
+the CORE-MAJOR for each Platform Extension.  Examples of this look like:</p>
 
 <p><div class="well well">
 	<ul>
@@ -65,14 +66,11 @@ number can be omitted when it is "0".  Examples of this look like:</p>
 	</ul>
 </div></p>
 
-<p>It is expected that for higher level usages of OVAL (for example SCAP) a “rolled up” 
-version of the various Core and Platform Extensions would be created to create a 
-snapshot of OVAL for purposes of things like validation.</p>
-
 <h2>Versioning Scheme</h2>
 
-<p>Both the Core and the Platform Extensions are constructed using either one or 
-two three component identifiers.  The following describes how each of those 
+<p>Both the Core and the Platform Extensions are constructed using component identifiers.  
+The Core uses a single three component identifier (e.g. 5.11.1) while the Platform Extensions use two, comma-separated 
+three component identifiers (e.g. 5.11.0:5.11.2). The following describes how each of those 
 three component identifiers are constructed.</p>
 
 <p>Each component of the identifier is a numeric value and corresponds 
