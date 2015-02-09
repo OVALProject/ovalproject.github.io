@@ -16,17 +16,10 @@ version update, and how version information is represented and conveyed in the
 OVAL Language.  It also explains how each of the different parts of the Language(
 the Core and Platform Extension models) are versioned.</p>
 
-<p>In versions of the Language previous to 5.11, all of the parts of the Language, 
-including both the Core and the Platform Extensions, were versioned 
-in one collection, receiving a single version number (such as 5.8, 5.10.1, etc.).  
-As of version 5.11, each of these parts are now versioned independently.  This 
-allows the Core to stay unchanged, while the more dynamic Platform Extensions 
-continue to evolve as needed.</p>
+<h2>Core Model Versioning</h2>
 
-<h2>Separate Versions Policy (OVAL 5.11 and after)</h2>
-
-<p>The Core versioning will remain as it always has been.  That is, the versions 
-will continue to look like:</p>
+<p>The Core Model's version are formatted to include a major, minor, and update version
+number and look like:</p>
 
 <p><div class="well well">MAJOR.MINOR.UPDATE</div></p>
 
@@ -41,10 +34,14 @@ Examples of this version look like:</p>
 	</ul>
 </div></p>
 
-<p>The version numbers for each of the Platform Extensions, however, will
-now use a longer format that specifies the version number of both the 
-Core from which the extension is built as well as the version for that 
-extension.  The format will look like:</p>
+<h2>Platform Extension Model Versioning</h2>
+
+<p>Platform Extensions are independently versioned using a concatenation of the 
+core language version that the extension is based upon followed by the version 
+of the of the platform extension. Both the core language version and the platform 
+extension version strings use the same basic structure including major, minor, 
+and update components.  The full concatenated version for a platform extension will 
+look like:</p>
 
 <p><div class="well">
 CORE-MAJOR.CORE-MINOR.CORE-UPDATE:PLAT-MAJOR.PLAT-MINOR.PLAT-UPDATE
@@ -60,9 +57,9 @@ the CORE-MAJOR for each Platform Extension.  Examples of this look like:</p>
 
 <p><div class="well well">
 	<ul>
-		<li>5.11.0:5.11</li>
-		<li>5.11.1:5.11.2</li>
-		<li>5.11.0:5.12</li>
+		<li>5.11.0:5.11 – the initial release of the platform extension that supports 5.11 of the core model</li>
+		<li>5.11.1:5.11.2 – a second update to the platform extension that supports the 5.11 core model</li>
+		<li>5.11.0:5.12 – a minor revision to the platform extension that supports the 5.11 core</li>
 	</ul>
 </div></p>
 
@@ -106,10 +103,10 @@ by one and the UPDATE component must be set to zero.</p>
 
 <h4>Example</h4>
 
-<p>In the OVAL 5.10 development process, the win-def:cmdlet_test was proposed to 
-the community and accepted. Since the new OVAL Test did not break backward 
-compatibility with previous versions of the OVAL Language, it was added in 
-OVAL 5.10.</p>
+<p>In the OVAL 5.10 development cycle, a new function to count the number of values 
+represented by one or more components was proposed.  Since the addition of this
+function did not break backwards compatiblity, it was added as part of the 5.10
+version of OVAL.</p>
 
 <h3>Exception</h3>
 
