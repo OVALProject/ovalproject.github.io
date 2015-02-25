@@ -21,7 +21,7 @@ layout: flat
 <li>All existing constructs (elements, attributes, schema types, enumerated values, etc.) must go through a deprecation phase prior to being removed.</li>
 <li>The duration of deprecation phases will be in terms of releases.</li>
 <li>Language constructs will remain in a deprecated state for at least one release.  During this time deprecated constructs will be flagged using a machine-readable flag.
-<p>Dates should not dictate the duration of an item&#8217;s deprecation status. Because some language features are less complex than others the impact felt by deprecating constructs varies across the language.</p>
+Dates should not dictate the duration of an item&#8217;s deprecation status. Because some language features are less complex than others the impact felt by deprecating constructs varies across the language.
 </li>
 <li>All deprecated constructs will be accompanied by a message explaining the reasoning for the deprecation and a pointer to its replacement (if applicable) as well as the version of OVAL in which the construct became deprecated.</li>
 <li>Prior to a release, deprecated and removed constructs will be announced via email and posted on the OVAL Web site.</li>
