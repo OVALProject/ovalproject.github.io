@@ -51,9 +51,7 @@ layout: flat
 
 <h3>Example</h3>
 
-<div class="ltgreybackground" style="border:1px solid #000000; padding-left:20px; font-size:80%; margin:10px auto">
 <pre>
-
 &lt;xsd:element name=&quot;fileauditedpermissions_test&quot; substitutionGroup=&quot;oval-def:test&quot;&gt;
   &lt;xsd:annotation&gt;
     &lt;!-- annotations --&gt;
@@ -74,10 +72,7 @@ layout: flat
   &lt;/xsd:appinfo&gt;
   &lt;!-- element definition --&gt;
 &lt;/xsd:element&gt;
-
 </pre>
-</div>
 
-<div align="right" style="margin:5px 0px 5px 0px; clear:right"><a class="backtop" href="#top">Back to top</a></div>
 
 
