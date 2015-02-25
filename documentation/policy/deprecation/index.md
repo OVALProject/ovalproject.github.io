@@ -5,8 +5,6 @@ layout: flat
 
 <h2>OVAL Language Deprecation Policy</h2>
 
-<p><strong>Document version:</strong> 1.0  <strong>Date:</strong> April 2, 2009</p>
-
 <h3>Definition</h3>
 
 <p>When an OVAL Language construct is marked as deprecated its usage becomes strongly discouraged and it may be removed in a later release.</p>
