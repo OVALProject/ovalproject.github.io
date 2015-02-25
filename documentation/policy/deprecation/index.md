@@ -50,7 +50,6 @@ layout: flat
 <p>This element will be implemented inside of an &lt;xsd:appinfo&gt; container inside of a language construct.  It will be accompanied by a Schematron rule that will report a warning for using a deprecated element upon validation.</p>
 
 <h3>Example</h3>
-
 <pre>
 &lt;xsd:element name=&quot;fileauditedpermissions_test&quot; substitutionGroup=&quot;oval-def:test&quot;&gt;
   &lt;xsd:annotation&gt;
