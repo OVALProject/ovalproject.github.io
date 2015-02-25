@@ -50,3 +50,34 @@ layout: flat
 <p>This element will be implemented inside of an &lt;xsd:appinfo&gt; container inside of a language construct.  It will be accompanied by a Schematron rule that will report a warning for using a deprecated element upon validation.</p>
 
 <h3>Example</h3>
+
+<div class="ltgreybackground" style="border:1px solid #000000; padding-left:20px; font-size:80%; margin:10px auto">
+<pre>
+
+&lt;xsd:element name=&quot;fileauditedpermissions_test&quot; substitutionGroup=&quot;oval-def:test&quot;&gt;
+  &lt;xsd:annotation&gt;
+    &lt;!-- annotations --&gt;
+  &lt;/xsd:annotation&gt;
+  &lt;xsd:appinfo&gt;
+    &lt;oval:deprecated_info&gt;
+      &lt;oval:version&gt;5.5&lt;/oval:version&gt;
+      &lt;oval:reason&gt;Replaced by filesaudtiedpermissions_better_test&gt;/oval:reason&gt;
+      &lt;oval:comment&gt;Did not align with Win32 API&gt;/oval:comment&gt;
+    &lt;/oval:deprecated_info&gt;
+    &lt;sch:pattern id=&quot;foo_pattern&quot;&gt;
+      &lt;sch:rule context=&quot;win-def:fileauditedpermissions_test&quot;&gt;
+        &lt;sch:report&gt;
+          DEPRECATED ELEMENT: &lt;sch:value-of select=&quot;name()&quot;/&gt;
+	&lt;/sch:report&gt;
+      &lt;/sch:rule&gt;
+    &lt;/sch:pattern&gt;
+  &lt;/xsd:appinfo&gt;
+  &lt;!-- element definition --&gt;
+&lt;/xsd:element&gt;
+
+</pre>
+</div>
+
+<div align="right" style="margin:5px 0px 5px 0px; clear:right"><a class="backtop" href="#top">Back to top</a></div>
+
+
