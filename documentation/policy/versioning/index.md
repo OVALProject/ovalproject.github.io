@@ -50,16 +50,19 @@ CORE-MAJOR.CORE-MINOR.CORE-UPDATE:PLAT-MAJOR.PLAT-MINOR.PLAT-UPDATE
 <p>Where the first 3 version numbers correspond to the Core version from 
 which the Platform Extension is built and the 3 version numbers following the 
 colon (:) represent the Platform Extension’s version.  For example, the version 
-5.11.0:5.11 would represent the initial version of an extension built off of the 
-5.11 version of the OVAL Core.  Note that the trailing UPDATE version 
-number can be omitted when it is "0".  Finally, it is expected that the PLAT-MAJOR matches
-the CORE-MAJOR for each Platform Extension.  Examples of this look like:</p>
+5.11.0:1.0 would represent the initial version of an extension built off of the 
+5.11 version of the OVAL Core.  The initial version of all Platform Extensions 
+will use the '1.0' notation to the right of the colon to indicate the first version of the
+extension.  Note that the trailing UPDATE version 
+number can be omitted when it is "0".  Examples of this look like:</p>
 
 <p><div class="well well">
 	<ul>
-		<li>5.11.0:5.11 – the initial release of the platform extension that supports 5.11 of the core model</li>
-		<li>5.11.1:5.11.2 – a second update to the platform extension that supports the 5.11 core model</li>
-		<li>5.11.0:5.12 – a minor revision to the platform extension that supports the 5.11 core</li>
+		<li>5.11.0:1.0 – the initial release of the platform extension that supports 5.11 of the core model</li>
+		<li>5.11.0:2.0 – a major update to the platform extension that supports the 5.11 core model</li>
+		<li>5.11.0:2.1 – a minor revision to the platform extension that supports the 5.11 core</li>
+		<li>5.11.0:2.1.1 - an update revision to the platform extension that supports the 5.11 core</li>
+		<li>5.12.1:1.0 - the initial release of the platform extension that supporte the 5.12.1 core</li>
 	</ul>
 </div></p>
 
@@ -67,7 +70,7 @@ the CORE-MAJOR for each Platform Extension.  Examples of this look like:</p>
 
 <p>Both the Core and the Platform Extensions are constructed using component identifiers.  
 The Core uses a single three component identifier (e.g. 5.11.1) while the Platform Extensions use two, colon-separated 
-three component identifiers (e.g. 5.11.0:5.11.2). The following describes how each of those 
+three component identifiers (e.g. 5.11.0:1.3.2). The following describes how each of those 
 three component identifiers are constructed.</p>
 
 <p>Each component of the identifier is a numeric value and corresponds 
