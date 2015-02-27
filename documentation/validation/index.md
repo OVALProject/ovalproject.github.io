@@ -1,6 +1,6 @@
 ---
-title: OVAL Tutorial
+title: Validation
 layout: flat
 ---
 
-The OVAL Tutorial will go here.
+OVAL Validation information will go here.
