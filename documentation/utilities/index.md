@@ -8,7 +8,7 @@ various ways including splitting, merging, validating, and normalizing OVAL cont
 
 <h3 style="margin-top:1.5em"><a name="tools" id="tools"></a>Useful Tools</h3>
 
-<p><a href="http://sourceforge.net/projects/ovalutils/files/oval_checker/" target="_blank" style="font-weight:bold">OVAL Checker</a> &mdash; This free Schematron-based utility will flag common mistakes and poor stylistic decisions in OVAL Definition documents. The list of issues that the utility detects and reports is ever-evolving as the community identifies OVAL authoring best practices. The current listing of authoring style guidelines is based on the <a href="/repository/about/style.html">OVAL Repository Style Guide</a>.</p>
+<p><a href="http://sourceforge.net/projects/ovalutils/files/oval_checker/" target="_blank" style="font-weight:bold">OVAL Checker</a> &mdash; This free Schematron-based utility will flag common mistakes and poor stylistic decisions in OVAL Definition documents. The list of issues that the utility detects and reports is ever-evolving as the community identifies OVAL authoring best practices. The current listing of authoring style guidelines is based on the <a href="https://oval.mitre.org/repository/about/style.html">OVAL Repository Style Guide</a>.</p>
 
 <p><a href="http://sourceforge.net/projects/ovalutils/files/oval_merge/oval_merge_v5.9/" target="_blank" style="font-weight:bold">OVAL Merge</a> &mdash; This free utility takes one or more files that contain valid OVAL content and combines them into a single, valid OVAL file that contains the union of all of the definitions, tests, objects, states, and variables found in the individual OVAL files.</p>
 
