@@ -66,6 +66,8 @@ number can be omitted when it is "0".  Examples of this look like:</p>
 	</ul>
 </div></p>
 
+Also, note that the corresponding OVAL Definitions Model and OVAL System Characteristics Model, for a Platform Extension, must be versioned together.
+
 <h2>Versioning Scheme</h2>
 
 <p>Both the Core and the Platform Extensions are constructed using component identifiers.  
