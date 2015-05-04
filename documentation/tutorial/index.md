@@ -78,7 +78,7 @@ definition title, the operating systems and platforms the definition applies to,
 the definition is checking for.  Note that information in the metadata element, including platforms and 
 products, does not affect evaluation of the definition.
 
-'''
+```
 <metadata> 
   <title>CoolWare NET-Suite is installed on the endpoint</title> 
   <affected family=”windows”> 
@@ -89,7 +89,7 @@ products, does not affect evaluation of the definition.
   </affected> 
   <description>CoolWare NET-Suite is installed</description> 
 </metadata>
-'''
+```
 
 ### Object
 
@@ -99,14 +99,15 @@ be collected.  In the example below, the OVAL Object specifies that a key in the
 contains version information about an application called CoolWare iBrowse, should be collected from 
 the endpoint.
 
-'''xml
+```xml
 <registry_object id=”oval:tutorial:obj:1” version=”3” 
 comment=”The registry key which holds the version of CoolWare iBrowse” 
 xmlns=”http://oval.mitre.org/XMLSchema/oval-definitions-5#windows”> 
   <hive>HKEY_LOCAL_MACHINE</hive> 
   <key>SOFTWARE\CoolWare\iBrowse</key> 
   <name>Version</name> 
-</registry_object>'''
+</registry_object>
+```
 
 ### State
 
