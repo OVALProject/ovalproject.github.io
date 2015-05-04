@@ -53,7 +53,7 @@ properties of the definition.  The circular shapes represent other OVAL componen
 Definition may be associated.  The lines in the diagram represent the relationships among these 
 components.  In addition, optional components in the diagram are marked with an asterisk (‘*’).
 
-![Figure 2](Figure-2.png)
+![OVAL Definition Components and Structure](Figure-2.png)
  
 Figure-2 OVAL Definition Components and Structure
 
@@ -78,7 +78,7 @@ definition title, the operating systems and platforms the definition applies to,
 the definition is checking for.  Note that information in the metadata element, including platforms and 
 products, does not affect evaluation of the definition.
 
-'''xml
+'''
 <metadata> 
   <title>CoolWare NET-Suite is installed on the endpoint</title> 
   <affected family=”windows”> 
@@ -106,8 +106,7 @@ xmlns=”http://oval.mitre.org/XMLSchema/oval-definitions-5#windows”>
   <hive>HKEY_LOCAL_MACHINE</hive> 
   <key>SOFTWARE\CoolWare\iBrowse</key> 
   <name>Version</name> 
-</registry_object>
-'''
+</registry_object>'''
 
 ### State
 
