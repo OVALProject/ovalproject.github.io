@@ -78,7 +78,7 @@ definition title, the operating systems and platforms the definition applies to,
 the definition is checking for.  Note that information in the metadata element, including platforms and 
 products, does not affect evaluation of the definition.
 
-```
+```xml
 <metadata> 
   <title>CoolWare NET-Suite is installed on the endpoint</title> 
   <affected family=”windows”> 
@@ -115,14 +115,14 @@ An OVAL State describes the expected values which are compared to the informatio
 endpoint being evaluated.  In the example below, the registry_state specifies that information matching 
 the value, “1.0”, is expected to be found in the Windows registry.
 
-'''xml
+```xml
 <registry_state id=”oval:tutorial:ste:1” version=”2” 
 comment=”The registry key matches with CoolWare iBrowse version 1.0 
 installed” 
 xmlns=”http://oval.mitre.org/XMLSchema/oval-definitions-5#windows”> 
   <value>1.0</value> 
 </registry_state> 
-'''
+```
 
 ### Test
 
@@ -131,7 +131,7 @@ matches the Definition of the endpoint information to be collected from the endp
 corresponding values expected to be found.  In the example registry_test below, the OVAL Object, 
 “oval:tutorial:obj:1” is associated with the OVAL State, “oval:tutorial:ste:1”.
 
-'''xml
+```xml
 <registry_test id=”oval:tutorial:tst:1” version=”4” 
 comment=”CoolWare iBrowse version 1.0 is installed” 
 check_existence=”at_least_one_exists” check=”all” 
@@ -139,7 +139,7 @@ xmlns=”http://oval.mitre.org/XMLSchema/oval-definitions-5#windows”>
   <object object_ref=”oval:tutorial:obj:1”/> 
   <state state_ref=”oval:tutorial:ste:1”/> 
 </registry_test> 
-'''
+```
 
 The “check” and “check_existence” attributes in an OVAL Test are used to guide the comparison of 
 endpoint values.  The check_existence attribute defines how many distinct groupings of information, as 
@@ -160,14 +160,14 @@ OVAL Criterion checks whether CoolWare eMail is installed.  So, the logical expr
 OVAL Criteria below checks whether both iBrowse and eMail are installed on the endpoint being 
 evaluated.
 
-'''xml
+```xml
 <criteria>
   <criterion comment="CoolWare iBrowse version 1.0 is installed" 
   test_ref="oval:tutorial:tst:1"/>
   <criterion comment="CoolWare eMail version 1.5 is installed" 
   test_ref="oval:tutorial:tst:2"/>
 </criteria>
-'''
+```
 
 ### Definition
 
@@ -187,7 +187,7 @@ checking to determine whether particular software is installed on the endpoint. 
 checking for CoolWare’s Net-Suite, which is indicated by both iBrowse and eMail being installed on the 
 endpoint. 
 
-'''xml
+```xml
 <definition id="oval:tutorial:def:123" version="1" class="inventory"> 
   <metadata> 
     <title>CoolWare NET-Suite is installed on the endpoint</title> 
@@ -206,7 +206,7 @@ endpoint.
         test_ref="oval:tutorial:tst:2"/> 
       </criteria> 
 </definition> 
-'''
+```
 
 ### Variables
 
@@ -216,19 +216,19 @@ Variable to define what values of a registry key to check for.  In addition to s
 the OVAL State must also stipulate what datatype and operation should be applied to the values 
 provided by the OVAL Variable. 
 
-'''xml
+```xml
 <registry_state id="oval:tutorial:ste:2" version="3" 
 comment="The registry key matches CoolWare Products specified below" 
 xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows"> 
   <value datatype="string" operation ="equals”
   var_ref="oval:tutorial: var:1" var_check=”all/> 
 </registry_state>
-'''
+```
 
 The referenced OVAL Variable is shown below.  It is composed of a list of product names.  Through the 
 variable, each of the product names is referenced by the OVAL State above. 
 
-'''xml
+```xml
 <constant_variable id="oval:tutorial:var:1" version="1" 
 datatype="string" 
 comment="Specific CoolWare products to check for"> 
@@ -237,7 +237,7 @@ comment="Specific CoolWare products to check for">
   <value>Cool Graphs</value> 
   <value>Einstein Math Editor</value> 
 </constant_variable>
-'''
+```
 
 Note that there are three kinds of variables in the OVAL language.  In this case, a “constant_variable” 
 which defines literal values is utilized.   The OVAL Language also provides local and external variables.  
@@ -250,7 +250,7 @@ combining other OVAL Objects.  Below, an OVAL Set is created to combine two othe
 union operator.  For example, if the OVAL Objects, “oval:tutorial:obj:33” and “oval:tutorial:obj:44” were 
 file_objects, then “oval:tutorial:obj:55” would identify all the files specified by both prior OVAL Objects.
 
-'''xml
+```xml
 <file_object id="oval:tutorial:obj:55" version=”1”
 xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#unix">
   <oval-def:set set_operator=”UNION”> 
@@ -260,7 +260,7 @@ xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#unix">
      </oval-def:object_reference>
   </oval-def:set>
 </file_object>
-'''
+```
 
 ### Filters
 
@@ -269,19 +269,19 @@ grouping of endpoint information, based on an OVAL State.  In the example below,
 oval:tutorial:ste:55, which will be referenced in the filter, identifies files which are owned by the user, 
 “755”.
 
-'''xml
+```xml
 <file_state id="oval:tutorial:ste:55" version="1" 
 xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#unix"> 
   <user_id operation="equals" datatype="int">755</user_id> 
 </file_state> 
-'''
+```
 
 Below, an OVAL Filter is used to constrain an OVAL file_object.  It does this by referencing the OVAL 
 State, oval:tutorial:ste:55, as defined above.  Since the OVAL Filter references this OVAL State, only the 
 files owned by the user, with user ID (UID) “755”, would be included.  All other UIDs would be filtered 
 out.
 
-'''xml
+```xml
 <file_object id="oval:tutorial:obj:66" " version=”1” 
 xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#unix">
   <path operation="pattern match">.*</path> 
@@ -289,7 +289,7 @@ xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#unix">
 <oval-def:filter action="include">oval:tutorial:ste:55
 </oval-def:filter>
 </file_object>
-'''
+```
 
 ### Regular Expressions
 
@@ -303,7 +303,7 @@ products which may be installed on the endpoint.
 First, consider the registry_object, “oval:tutorial:obj:1.  It specifies that the registry key which stores the 
 names of CoolWare products should be checked.
 
-'''xml  
+```xml  
 <registry_object id="oval:tutorial:obj:1" version="3" 
 comment="The registry key which holds the names of CoolWare products" 
 xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows"> 
@@ -311,7 +311,7 @@ xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows">
   <key>SOFTWARE\CoolWare</key> 
   <name>Product</name> 
 </registry_object>
-'''
+```
 
 The registry_state below uses a regular expression to define what values are expected.  When 
 referenced from within an OVAL Test, in combination with the registry_object above, this registry_state 
@@ -319,14 +319,14 @@ defines the names of all premium versions of CoolWare products.  The regular exp
 find all product names ending with the word “Premium” since this is how premium versions of CoolWare 
 products are indicated.
 
-'''xml
+```xml
 <registry_state id="oval:tutorial:ste:1" version="2" 
 comment="The registry key that matches Premium editions of a CoolWare 
 product" 
 xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows"> 
  <value datatype=”string” operation="pattern match”>.*Premium$</value> 
 </registry_state> 
-'''xml
+```xml
 
 ## OVAL Definitions Document
 
@@ -348,7 +348,7 @@ been discussed in this document are indicated in bold.  An additional OVAL Test,
 State, which have not been covered yet, are included in the example.  Since these components are 
 required for the example definition they must also be included in the oval_definitions element.
 
-'''xml
+```xml
 <?xml version="1.0" encoding="UTF-8"?> 
 <oval_definitions 
   xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-definitions-5  
@@ -429,7 +429,7 @@ required for the example definition they must also be included in the oval_defin
     </registry_state> 
   </states> 
 </oval_definitions>
-'''
+```
 
 ## Authoring Definition Content
 
@@ -641,7 +641,7 @@ whitelist and demonstrates the use of OVAL Filters.
 
 ### Checking for World Writable Files
  
- '''xml
+ ```xml
 <?xml version="1.0" encoding="UTF-8"?> 
 <!--  
 		- World Writable Files Example - 
@@ -725,11 +725,11 @@ whitelist and demonstrates the use of OVAL Filters.
         </file_state> 
     </states> 
 </oval_definitions> 
-'''
+```
 
 ### Inventory Example
 
-'''xml
+```xml
 <?xml version="1.0" encoding="UTF-8"?> 
 <!--  
 	- Inventory Example using a regular expression and a variable - 
@@ -931,11 +931,11 @@ var_check=”all”/>
     </constant_variable> 
   </variables> 
 </oval_definitions>
-'''
+```
 
 ### Retrieving a File Path from an OVAL Registry Object
 
-'''xml
+```xml
 <?xml version="1.0" encoding="UTF-8"?> 
 <!--  
   - File Object Path Example using a local variable - 
@@ -1049,11 +1049,11 @@ check="all"
     </local_variable> 
   </variables> 
 </oval_definitions>
-'''
+```
 
 ### Patch Example
 
-'''xml
+```xml
 <?xml version="1.0" encoding="UTF-8"?> 
 <!--  
 	- Patch Example  - 
@@ -1336,11 +1336,11 @@ Server\\MSSQL11\..*\\Setup$</key>
     </registry_state> 
   </states> 
 </oval_definitions>
-'''
+```
 
 #### Checking for Compliance to a Whitelist
 
-'''xml
+```xml
 <?xml version="1.0" encoding="UTF-8"?> 
 <!--  
 	- Linux Whitelist Example - 
@@ -1494,7 +1494,7 @@ Server\\MSSQL11\..*\\Setup$</key>
     </constant_variable> 
   </variables> 
 </oval_definitions>
-'''
+```
 
 ## Additional Resources
 
