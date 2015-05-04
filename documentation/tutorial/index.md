@@ -24,7 +24,6 @@ interpret the results of comparing the characteristics, which were observed on a
 what was expected.  Figure-1, below, depicts a generic flowchart of this process. 
 
 ![Comparing and Interpreting Endpoint Information](Figure-1.png)
- 
 **Figure-1 Comparing and Interpreting Endpoint Information**
 
 In Figure-1, a number of tests are defined in terms of what endpoint information should be checked and 
@@ -37,8 +36,12 @@ The components of an OVAL Definition follow the same pattern as the general conc
 above.  The components relate to Figure-1 in the following fashion.
   
 * An OVAL Object specifies “What to Check” on the endpoint being evaluated.  
+
 * OVAL States specify “What’s Expected” in terms of the information found concerning the endpoint.
-* The OVAL Test associates OVAL Objects and OVAL States which should be used to determine whether the “Observed Equals Expected”. 
+
+* The OVAL Test associates OVAL Objects and OVAL States which should be used to determine whether 
+the “Observed Equals Expected”. 
+
 * Finally, the OVAL Criteria describes an assertion about an endpoint which is used to determine 
 whether the “Criteria Is Satisfied.”  The OVAL Criteria defines a logical expression used to 
 interpret the outcome of the comparisons specified by the OVAL Tests. 
@@ -51,7 +54,6 @@ Definition may be associated.  The lines in the diagram represent the relationsh
 components.  In addition, optional components in the diagram are marked with an asterisk (‘*’).
 
 ![OVAL Definition Components and Structure](Figure-2.png)
- 
 **Figure-2 OVAL Definition Components and Structure**
 
 As seen in Figure-2, an OVAL Definition includes metadata which describes the purpose and origin of the 
@@ -74,6 +76,7 @@ The metadata element in an OVAL Definition conveys information about the definit
 definition title, the operating systems and platforms the definition applies to, and a description of what 
 the definition is checking for.  Note that information in the metadata element, including platforms and 
 products, does not affect evaluation of the definition.
+
 ```xml
 <metadata> 
   <title>CoolWare NET-Suite is installed on the endpoint</title> 
@@ -86,6 +89,7 @@ products, does not affect evaluation of the definition.
   <description>CoolWare NET-Suite is installed</description> 
 </metadata>
 ```
+
 ### Object
 
 An OVAL Object specifies which information should be collected from the endpoint for evaluation.  An 
@@ -170,11 +174,11 @@ In addition to OVAL Metadata and OVAL Criteria (as illustrated in Figure-2, abov
 also has a class which indicates the category the definition falls into.  This helps to identify the 
 definition’s purpose.  In OVAL, there are five kinds of definition classes:
 
-1.	Compliance – Checks whether an endpoint is compliant with a specific policy.
-2.	Inventory – Checks whether specific software is installed on the endpoint.
-3.	Miscellaneous – OVAL Definitions that do not fall into one of the other defined classes.
-4.	Patch – Checks whether a patch needs to be installed on an endpoint.
-5.	Vulnerability – Checks whether an endpoint is vulnerable.
+1.	*Compliance* – Checks whether an endpoint is compliant with a specific policy.
+2.	*Inventory* – Checks whether specific software is installed on the endpoint.
+3.	*Miscellaneous* – OVAL Definitions that do not fall into one of the other defined classes.
+4.	*Patch* – Checks whether a patch needs to be installed on an endpoint.
+5.	*Vulnerability* – Checks whether an endpoint is vulnerable.
 
 The definition below has been constructed from some of the example components discussed above.  
 These components are indicated in bold.  Note that this definition has a class of “inventory”, since it is 
@@ -333,15 +337,16 @@ element, in the order in which they occur.  In addition to the components that h
 discussed, the OVAL oval_definitions element also contains a section for OVAL Variables.  OVAL 
 Variables will be covered later in this document.
 
-![Figure](Figure-3.jpg)
+![oval_definitions Element Sections](Figure-3.png)
  
-** Figure-3 oval_definitions Element Sections**
+**Figure-3 oval_definitions Element Sections**
 
 The example oval_definitions element, below, includes the definition discussed above, and all other 
 OVAL components required for specifying it.  The definition and other components which have already 
 been discussed in this document are indicated in bold.  An additional OVAL Test, OVAL Object, and OVAL 
 State, which have not been covered yet, are included in the example.  Since these components are 
 required for the example definition they must also be included in the oval_definitions element.
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?> 
 <oval_definitions 
@@ -424,6 +429,7 @@ required for the example definition they must also be included in the oval_defin
   </states> 
 </oval_definitions>
 ```
+
 ## Authoring Definition Content
 
 Producing OVAL Definitions is the process by which information, from an external source, is transformed 
@@ -600,9 +606,9 @@ the definition or simply an error in formulating the OVAL Criteria.  In either c
 level of confidence established before the definition is used in a production environment.
 
 Finally, the efficiency of the definition should also be assessed.  A definition may be valid, interoperable, 
-and accurate but still not useable in practice.  
+and accurate but still not use-able in practice.  
 
-* TO DO: Add and explain an example of how content design can affect evaluation efficiency.*
+*TO DO: Add and explain an example of how content design can affect evaluation efficiency.*
 
 ## Annotated Examples
 
