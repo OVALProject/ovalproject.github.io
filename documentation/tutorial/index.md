@@ -181,7 +181,7 @@ definition’s purpose.  In OVAL, there are five kinds of definition classes:
 5.	*Vulnerability* – Checks whether an endpoint is vulnerable.
 
 The definition below has been constructed from some of the example components discussed above.  
-These components are indicated in bold.  Note that this definition has a class of “inventory”, since it is 
+These components have been placed within a definition element.  Note that this definition has a class of “inventory”, since it is 
 checking to determine whether particular software is installed on the endpoint.  The definition is 
 checking for CoolWare’s Net-Suite, which is indicated by both iBrowse and eMail being installed on the 
 endpoint. 
@@ -343,8 +343,8 @@ Variables will be covered later in this document.
 
 The example oval_definitions element, below, includes the definition discussed above, and all other 
 OVAL components required for specifying it.  The definition and other components which have already 
-been discussed in this document are indicated in bold.  An additional OVAL Test, OVAL Object, and OVAL 
-State, which have not been covered yet, are included in the example.  Since these components are 
+been discussed in this document are included in the example.  An additional OVAL Test, OVAL Object, and OVAL 
+State, which have not been covered yet, are also included.  Since these components are 
 required for the example definition they must also be included in the oval_definitions element.
 
 ```xml
@@ -607,8 +607,6 @@ level of confidence established before the definition is used in a production en
 
 Finally, the efficiency of the definition should also be assessed.  A definition may be valid, interoperable, 
 and accurate but still not use-able in practice.  
-
-*TO DO: Add and explain an example of how content design can affect evaluation efficiency.*
 
 ## Annotated Examples
 
