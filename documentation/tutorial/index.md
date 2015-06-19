@@ -1,5 +1,7 @@
-﻿     
-# OVAL Content Creation Tutorial
+---
+title: OVAL Content Creation Tutorial
+layout: flat
+---
 
 ## Introduction
 
