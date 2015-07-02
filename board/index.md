@@ -26,7 +26,6 @@ layout: flat
 	<a name="upcoming_meetings"></a>
 	<h2>Upcoming Meetings</h2>
 	<ul>
-		<li>May 11, 2015</li>
 		<li>July 13, 2015</li>
 	</ul>
 </div>
