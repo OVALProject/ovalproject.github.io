@@ -20,8 +20,8 @@ no_in_page_title: true
     <p><a class="btn btn-primary btn-lg" role="button" href="/documentation">Documentation »</a></p>
   </div>
   <div class="col-md-6">
-    <h2>Idioms</h2>
-    <p>Frequently-used OVAL Language patterns.</p>
-    <p><a class="btn btn-primary btn-lg" role="button" href="/documentation/idioms">Idioms »</a></p>
+    <h2>Repository Submissions</h2>
+    <p>Tips for how to construct and submit OVAL Definitions.</p>
+    <p><a class="btn btn-primary btn-lg" role="button" href="/documentation/repository">Repository »</a></p>
   </div>
 </div>

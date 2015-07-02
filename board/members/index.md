@@ -117,19 +117,13 @@ no_in_page_title: true
 					<tr>
 						<td>
 						<a href="http://www.cisecurity.org/" target="_blank">Center for Internet Security</a>
-						<div class="panel-body-sm">Blake Frantz<br>William Munyan</div>
+						<div class="panel-body-sm">Blake Frantz<br>Adam Montville</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
 						<a href="http://www.dtcc.com/" target="_blank">Depository Trust &amp; Clearing Corporation (DTCC)</a>
 						<div class="panel-body-sm">Aharon Chernin</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-						<div class="panel-body-sm"><a target="_blank" href="https://datatracker.ietf.org/wg/sacm/charter/">Internet Engineering Task Force (IETF) Security Automation and Continuous Monitoring (SACM) Working Group Liaison</a>
-						<div class="panel-body-sm">Adam Montville</div>
 						</td>
 					</tr>
 					<tr>
@@ -147,6 +141,7 @@ no_in_page_title: true
 					<tr>
 						<td>
 						<div class="panel-body-sm"><strong>Individual</strong></div>
+						<div class="panel-body-sm">William Munyan</div>
 						<div class="panel-body-sm">Nils Puhlmann</div>
 						</td>
 					</tr>
