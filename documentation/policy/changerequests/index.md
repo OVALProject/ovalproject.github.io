@@ -204,6 +204,7 @@ no_in_page_title: true
 	<ol>
 		<li>Draft an email message that contains the information described above.</li>
 		<li>Attach any relevant documents to the message such as schema changes, sample content, etc.</li>
+		<li>Attach the completed <a href="oval-proposal-form.txt">OVAL Proposal Form</a>.</li>
 		<li><p>Send the message to the <a href="https://oval.mitre.org/community/registration.html">OVAL Developers Forum</a> at <a href="mailto:oval-developer-list@lists.mitre.org">oval-developer-list@lists.mitre.org</a> for review by the OVAL Community. Note that you must be a member of the OVAL Developer's Forum to send a message to the list.</p><p>Alternatively, those wishing to submit sensitive information may send it directly to <a href="mailto:oval@mitre.org">oval@mitre.org</a>.</p></li>
 	</ol>
 	<div style="float:right"><a class="btn btn-link" href="#top">Back to Top</a></div>
