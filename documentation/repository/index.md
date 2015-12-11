@@ -6,7 +6,7 @@ no_in_page_title: true
 <a name="top"></a>
 <h1>{{ page.title }}</h1>
 
-<p>Members of the information security community may submit properly formatted OVAL Vulnerability, Compliance, Inventory, and Patch Definitions to the <a href="http://oval.mitre.org/community/registration.html">OVAL Repository Forum</a>, where they are reviewed by the OVAL Moderator before being put into the <a href="http://oval.mitre.org/repository/">OVAL Repository</a> for use by the community.</p>
+<p>Members of the information security community may submit properly formatted OVAL Vulnerability, Compliance, Inventory, and Patch Definitions to the <a href="http://lists.cisecurity.org/mailman/listinfo/oval_repository_lists.cisecurity.org">OVAL Repository Forum</a>, where they are reviewed by the OVAL Moderator before being put into the <a href="http://oval.mitre.org/repository/">OVAL Repository</a> for use by the community.</p>
 
 <h3 style="margin-top:1.5em"><a name="guidelines" id="guidelines"></a>Guidelines</h3>
 <p>Before submitting any content to the OVAL Repository, please review the following resources:</p>
@@ -47,8 +47,8 @@ no_in_page_title: true
 	<li>A description of all new content.</li>
 	</ul>
 </li>
-<li>Send the <a href="mailto:oval-discussion-list@lists.mitre.org">email</a> to the OVAL Repository Forum and include the submission as an XML attachment. Note that you must be a <a href="http://oval.mitre.org/community/registration.html">member</a> of the OVAL Repository Forum to post.</li>
-<li>Those wishing to submit sensitive information may send it directly to <a href="mailto:oval@mitre.org">oval@mitre.org</a>.</li>
+<li>Send the <a href="mailto:oval-discussion-list@lists.mitre.org">email</a> to the OVAL Repository Forum and include the submission as an XML attachment. Note that you must be a <a href="http://lists.cisecurity.org/mailman/listinfo/oval_repository_lists.cisecurity.org">member</a> of the OVAL Repository Forum to post.</li>
+<li>Those wishing to submit sensitive information may send it directly to <a href="mailto:oval@cisecurity.org">oval@cisecurity.org</a>.</li>
 </ul>
 
 <div align="right" style="margin:5px 0px 5px 0px; clear:right"><a href="#top">Back to top</a></div>

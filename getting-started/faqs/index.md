@@ -364,7 +364,7 @@ no_in_page_title: true
 		and research institutions. Broad community participation in the OVAL effort
 		comes from system administrators, software vendors, security analysts, and
 		other members of the information security community reviewing and commenting
-		on the OVAL schemas on the <a href="http://oval.mitre.org/community/registration.html">Developer’s
+		on the OVAL schemas on the <a href="http://lists.cisecurity.org/mailman/listinfo/oval_developer_lists.cisecurity.org">Developer’s
 		Forum</a> and/or reviewing each draft definition and discussing and debating
 		it on the <a href="http://oval.mitre.org/community/index.html">Community
 		Forum</a>, both of which are hosted on the OVAL Web site. This means the
@@ -402,7 +402,7 @@ no_in_page_title: true
 	<h4><a name="a11"></a>A11. How can my organization and I be involved?</h4>
 		<p>An integral component of the OVAL effort is broad community participation. Visit the <a href="http://oval.mitre.org/community/index.html">OVAL Community</a> page for additional information.</p>
 	<h4><a name="a12"></a>A12. Is someone from OVAL available to speak or participate on panel discussions at industry-related events, meetings, etc.?</h4>
-		<p>Yes, contact <a href="mailto:oval@mitre.org">oval@mitre.org</a> to have MITRE present a briefing or participate in a panel discussion about <a href="http://oval.mitre.org/">OVAL</a> or <a href="http://measurablesecurity.mitre.org/" target="_blank">Making Security Measurable</a>, security automation, and/or related topics at your event.</p>
+		<p>Yes, contact <a href="mailto:oval@cisecurity.org">oval@cisecurity.org</a> to have MITRE present a briefing or participate in a panel discussion about <a href="http://oval.mitre.org/">OVAL</a> or <a href="http://measurablesecurity.mitre.org/" target="_blank">Making Security Measurable</a>, security automation, and/or related topics at your event.</p>
 	<h4><a name="a13"></a>A13. What is the relationship between OVAL and DHS?</h4>
 		<p>OVAL is sponsored by the office of <a href="http://www.dhs.gov/office-cybersecurity-and-communications/" target="_blank">Cybersecurity and Communications</a> at the <a href="http://www.dhs.gov/" target="_blank">U.S. Department of Homeland Security</a>. <a href="http://www.mitre.org/" target="_blank">MITRE</a>, operating as DHS’s Federally Funded Research and Development Center (FFRDC), manages this OVAL Web site, community engagement, and discussion lists to enable open and public collaboration with all stakeholders.</p>
 	<h4><a name="a14"></a>A14. Does OVAL participate in link exchange arrangements?</h4>
@@ -428,7 +428,7 @@ no_in_page_title: true
 		<h4><a name="a18" id="a18"></a>A18. Is OVAL free for public use?</h4>
 		<p>OVAL is an open standard. The OVAL Language and any resulting OVAL content based upon the language that is stored in the OVAL Repository are free to use by any organization or individual for any research, development, and/or commercial purposes, per the OVAL <a href="http://oval.mitre.org/about/termsofuse.html">Terms of Use.</a></p>
 	<p>MITRE has copyrighted the OVAL Language for the benefit of the community in order to ensure it remains a free and open standard, as well as to legally protect the ongoing use of it and any resulting content by government, vendors, and/or users. MITRE has trademarked ® the OVAL acronym and the OVAL logo to protect their sole and ongoing use by the OVAL effort within the information security arena.</p>
-	<p>Please contact <a href="mailto:oval@mitre.org">oval@mitre.org</a> if you require further clarification on this issue.</p>
+	<p>Please contact <a href="mailto:oval@cisecurity.org">oval@cisecurity.org</a> if you require further clarification on this issue.</p>
 	<div align="right" style="margin:5px 0px 5px 0px; clear:right"><a class="backtop" href="#top">Back to top</a></div>
 	<h3><a name="b"></a>B. OVAL Language</h3>
 	<h4><a name="b1"></a>B1. What is the OVAL Language?</h4>
@@ -611,18 +611,18 @@ no_in_page_title: true
 		<h4><a name="d3"></a>D3. How can products and services that have adopted OVAL help me?</h4>
 			<p>See <a href="http://oval.mitre.org/adoption/benefits.html">Benefits of OVAL Adoption</a>.</p>
 		<h4><a name="d4"></a>D4. Can my organization register our product or service as an OVAL Adopter?</h4>
-			<p>To make a <a href="http://oval.mitre.org/adoption/make_a_declaration.html">declaration</a> to adopt OVAL, send an email to <a href="mailto:oval@mitre.org">oval@mitre.org</a> with your company name and contact information, the type of product, the name of the product(s) or service(s), and the way in which your product is or will adopt OVAL.</p>
+			<p>To make a <a href="http://oval.mitre.org/adoption/make_a_declaration.html">declaration</a> to adopt OVAL, send an email to <a href="mailto:oval@cisecurity.org">oval@cisecurity.org</a> with your company name and contact information, the type of product, the name of the product(s) or service(s), and the way in which your product is or will adopt OVAL.</p>
 		<h4><a name="d5"></a>D5. Can my organization be listed for supporting OVAL?</h4>
 			<p>Yes, organizations with capabilities that support the use of OVAL can be listed on the <a href="http://oval.mitre.org/compatible/about/supporters.html">OVAL
-			Supporters</a> page. Send an email to <a href="mailto:oval@mitre.org">oval@mitre.org</a> to request that your capability be added to the list.</p>
+			Supporters</a> page. Send an email to <a href="mailto:oval@cisecurity.org">oval@cisecurity.org</a> to request that your capability be added to the list.</p>
 	<div align="right" style="margin:5px 0px 5px 0px; clear:right"><a class="backtop" href="#top">Back to top</a></div>
 	<h3><a name="e"></a>E.  OVAL Community Forum &amp; OVAL Board</h3>
 		<h4><a name="e1"></a>E1. What is the role of the OVAL Community Forum email list and how can I join?</h4>
-			<p>The <a href="http://oval.mitre.org/community/registration.html">OVAL Community Forum</a> email discussion list is a lightly moderated public forum for new and previously posted OVAL Repository content, as well as the vulnerabilities and configuration issues themselves that affect definition writing.</p>
+			<p>The <a href="https://oval.cisecurity.org/community/discuss">OVAL Community Forum</a> email discussion list is a lightly moderated public forum for new and previously posted OVAL Repository content, as well as the vulnerabilities and configuration issues themselves that affect definition writing.</p>
 			<p>Active participation is an important part of the OVAL effort. System administrators, software vendors, security analysts, developers, and other members of the information security community are all invited to participate. A confirmation will be sent to you verifying your addition to the list(s). View our <a href="http://oval.mitre.org/about/privacy_policy.html">Privacy
 			Policy</a>.</p>
 		<h4><a name="e2"></a>E2. What is the role of the OVAL Developer’s Forum email list and how can I join?</h4>
-			<p>The <a href="http://oval.mitre.org/community/registration.html">OVAL Developer’s List</a> is a lightly moderated public forum for discussing the OVAL Language as well as specific topics for developers such as addressing OVAL implementation issues and for assisting other developers in incorporating OVAL information into their tools and services.</p>
+			<p>The <a href="http://lists.cisecurity.org/mailman/listinfo/oval_developer_lists.cisecurity.org">OVAL Developer’s List</a> is a lightly moderated public forum for discussing the OVAL Language as well as specific topics for developers such as addressing OVAL implementation issues and for assisting other developers in incorporating OVAL information into their tools and services.</p>
 			<p>Active participation is an important part of the OVAL effort. System administrators, software vendors, security analysts, developers, and other members of the information security community are all invited to participate. A confirmation will be sent to you verifying your addition to the list(s). View our <a href="http://oval.mitre.org/about/privacy_policy.html">Privacy
 			Policy</a>.</p>
 		<h4><a name="e3"></a>E3. Who is the OVAL Board?</h4>
