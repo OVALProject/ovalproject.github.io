@@ -245,7 +245,7 @@ The following table goes through the schema line-by-line and details the modific
   <tbody>
     <tr>
       <td>01</td>
-      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[\*]_test” in accordance with <a href="#4-2-2-tests">Section 4.2.2</a>.</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[\*]\_test” in accordance with <a href="#4-2-2-tests">Section 4.2.2</a>.</td>
     </tr>
     <tr>
       <td>03</td>
@@ -254,7 +254,7 @@ The following table goes through the schema line-by-line and details the modific
 	<tr>
       <td>05-09</td>
       <td>The <span style="font-family: 'Courier New'">element_mapping</span> construct explicitly correlates the associated OVAL Test, Object, State, and Item constructs and must always be present.
-	<br/><br/>In most cases, the relevant OVAL Test name should be used to update the test, object, state, and item components of the <span style="font-family: 'Courier New'">element_mapping</span> construct with [\*]_test, [\*]_object, [\*]_state, and [\*]_item. With that said, it is important to note that it is also possible to map new OVAL Tests to existing OVAL Items as exemplified with the <span style="font-family: 'Courier New'">win-def:fileeffectiverights53_test</span> and <span style="font-family: 'Courier New'">win-sc:fileeffectiverights_item</span>.
+	<br/><br/>In most cases, the relevant OVAL Test name should be used to update the test, object, state, and item components of the <span style="font-family: 'Courier New'">element_mapping</span> construct with [\*]\_test, [\*]_object, [\*]_state, and [\*]_item. With that said, it is important to note that it is also possible to map new OVAL Tests to existing OVAL Items as exemplified with the <span style="font-family: 'Courier New'">win-def:fileeffectiverights53_test</span> and <span style="font-family: 'Courier New'">win-sc:fileeffectiverights_item</span>.
 	<br/><br/>The <span style="font-family: 'Courier New'">target_namespace</span> attribute identifies the namespace URI of the platform-specific OVAL System Characteristics Model associated with the OVAL Test.</td>
     </tr>
 	<tr>
