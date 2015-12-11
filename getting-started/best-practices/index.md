@@ -254,7 +254,7 @@ The following table goes through the schema line-by-line and details the modific
 	<tr>
       <td>05-09</td>
       <td>The <span style="font-family: 'Courier New'">element_mapping</span> construct explicitly correlates the associated OVAL Test, Object, State, and Item constructs and must always be present.
-	<br/><br/>In most cases, the relevant OVAL Test name should be used to update the test, object, state, and item components of the <span style="font-family: 'Courier New'">element_mapping</span> construct with [*]_test, [*]_object, [*]_state, and [*]_item. With that said, it is important to note that it is also possible to map new OVAL Tests to existing OVAL Items as exemplified with the <span style="font-family: 'Courier New'">win-def:fileeffectiverights53_test</span> and <span style="font-family: 'Courier New'">win-sc:fileeffectiverights_item</span>.
+	<br/><br/>In most cases, the relevant OVAL Test name should be used to update the test, object, state, and item components of the <span style="font-family: 'Courier New'">element_mapping</span> construct with [\*]_test, [\*]_object, [\*]_state, and [\*]_item. With that said, it is important to note that it is also possible to map new OVAL Tests to existing OVAL Items as exemplified with the <span style="font-family: 'Courier New'">win-def:fileeffectiverights53_test</span> and <span style="font-family: 'Courier New'">win-sc:fileeffectiverights_item</span>.
 	<br/><br/>The <span style="font-family: 'Courier New'">target_namespace</span> attribute identifies the namespace URI of the platform-specific OVAL System Characteristics Model associated with the OVAL Test.</td>
     </tr>
 	<tr>
@@ -1015,34 +1015,34 @@ The following sections provide a checklist to work through when extending the OV
 ### 5.1 Submitting a New OVAL Component Schema
 An OVAL Component Schema is a collection of OVAL Tests, Objects, States, and Items that are related based on the platform for which they can check or describe configuration information. In order to extend the OVAL Language to a new platform, it is necessary to develop a new OVAL Component Schema for that platform. The following checklist describes what is needed for proposing a new OVAL extension for inclusion in the OVAL Language.
 
-- [ ] Explains what platform the OVAL extension is intended to support and why it is needed.
-- [ ] Provides a brief overview of each OVAL Test included in the proposed extension.  Please see the Submitting a New OVAL Test section below to ensure the requirements for a new test are supported.
-- [ ] OVAL Definitions and System Characteristics schemas are provided for the proposed OVAL extension.
-- [ ] Proposal includes sample content that demonstrates how the OVAL extension can be used.
-- [ ] Proposal includes information on how the OVAL Tests in the OVAL extension schema can be implemented.  Information may include: 
+- Explains what platform the OVAL extension is intended to support and why it is needed.
+- Provides a brief overview of each OVAL Test included in the proposed extension.  Please see the Submitting a New OVAL Test section below to ensure the requirements for a new test are supported.
+- OVAL Definitions and System Characteristics schemas are provided for the proposed OVAL extension.
+- Proposal includes sample content that demonstrates how the OVAL extension can be used.
+- Proposal includes information on how the OVAL Tests in the OVAL extension schema can be implemented.  Information may include: 
 	* Relevant APIs for each entity in the new OVAL Object, State, and Item
 	* Algorithms that can be followed
 	* Anything else that will help a developer implement support for the test
-- [ ] Proposal includes any additional information (references, caveats, etc.) that will be relevant in determining whether or not the OVAL Component Schema should be accepted as part of the OVAL Language.
+- Proposal includes any additional information (references, caveats, etc.) that will be relevant in determining whether or not the OVAL Component Schema should be accepted as part of the OVAL Language.
 
 ### 5.2 Submitting a New OVAL Core Capability
 The OVAL Core consists of the OVAL Definitions, System Characteristics, Results, Variables, and Directives Schemas. Additional functionality added to these schemas is considered a new OVAL Core Capability. The following describes the guidelines for proposing a new OVAL Core Capability to the OVAL Language.
 
-- [ ] Explains what the proposed OVAL core capability is and why it is needed.
-- [ ] Specifies what OVAL Core Models are affected by this new OVAL Core Capability.
-- [ ] Indicates whether or not there multiple approaches to implementing the proposed OVAL Core Capability and if so, presents each approach along with the relevant pros and cons.
-- [ ] Indicates whether or not the OVAL Core Capability represents a fundamental change to the OVAL Language.
-- [ ] Proposal includes sample content that demonstrates the proposed OVAL Core Capability’s use cases.
-- [ ] Proposal includes the relevant documentation associated with the new OVAL Core Capability.
+- Explains what the proposed OVAL core capability is and why it is needed.
+- Specifies what OVAL Core Models are affected by this new OVAL Core Capability.
+- Indicates whether or not there multiple approaches to implementing the proposed OVAL Core Capability and if so, presents each approach along with the relevant pros and cons.
+- Indicates whether or not the OVAL Core Capability represents a fundamental change to the OVAL Language.
+- Proposal includes sample content that demonstrates the proposed OVAL Core Capability’s use cases.
+- Proposal includes the relevant documentation associated with the new OVAL Core Capability.
 
 ### 5.3 Submitting a New OVAL Test
 An OVAL Test is an OVAL Construct that correlates what OVAL Items on the system should be collected and how many of those OVAL Items must match the specified OVAL State(s) to evaluate to a result of ‘true’. When proposing a new OVAL Test, it is necessary to also design the corresponding OVAL Object, State, and Item. The following describes the guidelines for proposing a new OVAL Test to the OVAL Language.
 
-- [ ] Explains the use cases for the proposed test and why it is needed.
-- [ ] Indicates what OVAL extensions are affected by the new test.
-- [ ] Specifies the entity needed in the OVAL Object, State, and Item constructs.
-- [ ] Documentation explaining what each construct does.
-- [ ] For each entity specify the following: 
+- Explains the use cases for the proposed test and why it is needed.
+- Indicates what OVAL extensions are affected by the new test.
+- Specifies the entity needed in the OVAL Object, State, and Item constructs.
+- Documentation explaining what each construct does.
+- For each entity specify the following: 
 	* Name
 	* Documentation 
 	* What information does the OVAL Entity hold?
@@ -1057,17 +1057,17 @@ An OVAL Test is an OVAL Construct that correlates what OVAL Items on the system 
 		* Relevant APIs
 		* Algorithms that can be followed
 		* Anything else that will help a developer implement support for the entity
-- [ ] Proposal includes sample content that demonstrates the OVAL Test use cases.
-- [ ] Includes any additional information (references, caveats, etc.) that will be relevant in determining whether or not the OVAL Test should be accepted as part of the OVAL Language.
+- Proposal includes sample content that demonstrates the OVAL Test use cases.
+- Includes any additional information (references, caveats, etc.) that will be relevant in determining whether or not the OVAL Test should be accepted as part of the OVAL Language.
 
 ### 5.4 Submitting a New OVAL Entity
 An OVAL Entity is a system configuration property in the OVAL Language.  When an OVAL Entity is used in an OVAL Object or State, it represents something being specified about that system configuration property. When an OVAL Entity is used in an OVAL Item, it represents the system configuration property as collected from the system. The following describes the guidelines for proposing a new OVAL Entity to the OVAL Language.
 
-- [ ] Proposal includes sample content that demonstrates the OVAL Test use cases.
-- [ ] Includes any additional information (references, caveats, etc.) that will be relevant in determining whether or not the OVAL Test should be accepted as part of the OVAL Language.
-- [ ] What are the use cases for the proposed OVAL Entity? Why is it needed?
-- [ ] What constructs will be affected? Does it break backwards compatibility with previous versions of the OVAL Language? If so, please propose a new OVAL Test following the guidelines in [Submitting a New OVAL Test](http://ovalproject.github.io/documentation/policy/changerequests/) above.
-- [ ] For each entity specify the following: 
+- Proposal includes sample content that demonstrates the OVAL Test use cases.
+- Includes any additional information (references, caveats, etc.) that will be relevant in determining whether or not the OVAL Test should be accepted as part of the OVAL Language.
+- What are the use cases for the proposed OVAL Entity? Why is it needed?
+- What constructs will be affected? Does it break backwards compatibility with previous versions of the OVAL Language? If so, please propose a new OVAL Test following the guidelines in [Submitting a New OVAL Test](http://ovalproject.github.io/documentation/policy/changerequests/) above.
+- For each entity specify the following: 
 	* Name
 	* Documentation 
 	* What information does the OVAL Entity hold?
@@ -1087,28 +1087,28 @@ An OVAL Entity is a system configuration property in the OVAL Language.  When an
 ### 5.5 Adding a New OVAL Function
 An OVAL Function is an OVAL Construct that is used to manipulate or perform some operation on a specified set of values at run-time. The following describes the guidelines for proposing a new OVAL Function to the OVAL Language.
 
-- [ ] What does the function do?  Why is it needed?
-- [ ] What does the function do? Why is it needed?
-- [ ] Are there any requirements on the number of arguments or datatypes of those arguments?
-- [ ] Any there any attributes necessary to drive the function?
-- [ ] Provide documentation for the proposed OVAL Function 
-- [ ] What does the function do?
-- [ ] How should the function process the arguments?
-- [ ] Functionality of attributes (if applicable)
-- [ ] Boundary and error conditions (if applicable)
-- [ ] Restrictions on the number of arguments or their datatypes (if applicable)
-- [ ] Other useful documentation
-- [ ] Sample content that demonstrates its use cases.
+- What does the function do?  Why is it needed?
+- What does the function do? Why is it needed?
+- Are there any requirements on the number of arguments or datatypes of those arguments?
+- Any there any attributes necessary to drive the function?
+- Provide documentation for the proposed OVAL Function 
+- What does the function do?
+- How should the function process the arguments?
+- Functionality of attributes (if applicable)
+- Boundary and error conditions (if applicable)
+- Restrictions on the number of arguments or their datatypes (if applicable)
+- Other useful documentation
+- Sample content that demonstrates its use cases.
 
 ### 5.6 Requests to Modify Existing OVAL Constructs
-- [ ] What construct needs to be modified? Why does it need to be modified (e.g. missing or ambiguous documentation, datatype does not match the value, incorrect minimum/maximum occurrences, etc.)?
-- [ ] Does it break backwards compatibility with previous versions of the OVAL Language? If so, should it be considered under the Exceptions clause of the OVAL Language Versioning Methodology? Please see [OVAL Language Versioning Methodology](http://ovalproject.github.io/documentation/policy/versioning/) for more information.
-- [ ] Update schemas and specifications to reflect proposed changes.
+- What construct needs to be modified? Why does it need to be modified (e.g. missing or ambiguous documentation, datatype does not match the value, incorrect minimum/maximum occurrences, etc.)?
+- Does it break backwards compatibility with previous versions of the OVAL Language? If so, should it be considered under the Exceptions clause of the OVAL Language Versioning Methodology? Please see [OVAL Language Versioning Methodology](http://ovalproject.github.io/documentation/policy/versioning/) for more information.
+- Update schemas and specifications to reflect proposed changes.
 
 ### 5.7 Requests to Deprecate OVAL Constructs
-- [ ] OVAL Constructs that contain security issues, result in inconsistencies, or use obsoleted technologies or methodologies it should be deprecated in the OVAL Language. For more information, please see the [OVAL Language Deprecation Policy](http://ovalproject.github.io/documentation/policy/deprecation/). 
-- [ ] What OVAL Construct should be deprecated? Why should the OVAL Construct be deprecated?
-- [ ] Should a new OVAL Construct be recommended to replace it? If so, please refer to relevant sub-section in [Submitting a Request to Add New OVAL Constructs](http://ovalproject.github.io/documentation/policy/changerequests/#new) above.
+- OVAL Constructs that contain security issues, result in inconsistencies, or use obsoleted technologies or methodologies it should be deprecated in the OVAL Language. For more information, please see the [OVAL Language Deprecation Policy](http://ovalproject.github.io/documentation/policy/deprecation/). 
+- What OVAL Construct should be deprecated? Why should the OVAL Construct be deprecated?
+- Should a new OVAL Construct be recommended to replace it? If so, please refer to relevant sub-section in [Submitting a Request to Add New OVAL Constructs](http://ovalproject.github.io/documentation/policy/changerequests/#new) above.
 
 ### 5.8 Filling out the OVAL Proposal Form
 Once the checklist for the changes being proposed have been completed, implemented in the schema, and sample content developed, the [OVAL Proposal Form](http://ovalproject.github.io/documentation/policy/changerequests/oval-proposal-form.txt) must be filled out to summarize the changes for the OVAL Community as well as point them to related resources.  When filling out an OVAL Proposal Form for a proposal it may be beneficial to review other previously completed proposal forms to get a sense for what they should look like.  Previously completed OVAL Proposal Forms can be found in the various proposal directories in the /resources directory of the OVAL Sandbox<sup id="a24">[24](#f24)</sup>.
