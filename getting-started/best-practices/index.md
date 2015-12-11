@@ -75,14 +75,14 @@ layout: flat
     8. [Datatypes](#4-2-8-datatypes)
     9. [Enumerations](#4-2-9-enumerations)
 5. [OVAL Extension Checklist](#5-oval-extension-checklist)
-  1. Submitting a New OVAL Component Schema(#5-1-submitting-a-new-oval-component-schema)
-  2. Submitting a New OVAL Core Capability(#5-2-submitting-a-new-oval-core-capability)
-  3. Submitting a New OVAL Test(#5-3-submitting-a-new-oval-test)
-  4. Submitting a New OVAL Entity(#5-4-submitting-a-new-oval-entity)
-  5. Adding a New OVAL Function(#5-5-addomg-a-new-oval-function)
-  6. Requests to Modify Existing OVAL Constructs(#5-6-requests-to-modify-existing-oval-constructs)
-  7. Requests to Deprecate OVAL Constructs(#5-7-requests-to-deprecate-oval-constructs)
-  8. Filling out the OVAL Proposal Form(#5-8-filling-out-the-oval-proposal-form)
+  1. [Submitting a New OVAL Component Schema](#5-1-submitting-a-new-oval-component-schema)
+  2. [Submitting a New OVAL Core Capability](#5-2-submitting-a-new-oval-core-capability)
+  3. [Submitting a New OVAL Test](#5-3-submitting-a-new-oval-test)
+  4. [Submitting a New OVAL Entity](#5-4-submitting-a-new-oval-entity)
+  5. [Adding a New OVAL Function](#5-5-adding-a-new-oval-function)
+  6. [Requests to Modify Existing OVAL Constructs](#5-6-requests-to-modify-existing-oval-constructs)
+  7. [Requests to Deprecate OVAL Constructs](#5-7-requests-to-deprecate-oval-constructs)
+  8. [Filling out the OVAL Proposal Form](#5-8-filling-out-the-oval-proposal-form)
 6. [Sharing OVAL Language Extensions](#6-sharing-oval-language-extensions)
 
 ## Trademark Information
@@ -153,6 +153,7 @@ The OVAL Versioning Policy defines the methodology used to version the OVAL Lang
 
 ### 1.6 Conventions Used in this Document
 The following font and font style conventions are used throughout the remainder of this document:
+
 * The <span style="font-family: 'Courier New'">Courier New</span> font is used for writing constructs in the OVAL Language Data Model.
 		Example: <span style="font-family: 'Courier New'">file_test</span>
 
@@ -244,7 +245,7 @@ The following table goes through the schema line-by-line and details the modific
   <tbody>
     <tr>
       <td>01</td>
-      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[\*]_test” in accordance with [Section 4.2.2](#4-2-2-tests).</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[*]_test” in accordance with <a href="#4-2-2-tests">Section 4.2.2</a>.</td>
     </tr>
     <tr>
       <td>03</td>
@@ -253,7 +254,7 @@ The following table goes through the schema line-by-line and details the modific
 	<tr>
       <td>05-09</td>
       <td>The <span style="font-family: 'Courier New'">element_mapping</span> construct explicitly correlates the associated OVAL Test, Object, State, and Item constructs and must always be present.
-	<br/><br/>In most cases, the relevant OVAL Test name should be used to update the test, object, state, and item components of the <span style="font-family: 'Courier New'">element_mapping</span> construct with [\*]_test, [\*]_object, [\*]_state, and [\*]_item.  With that said, it is important to note that it is also possible to map new OVAL Tests to existing OVAL Items as exemplified with the win-def:fileeffectiverights53_test and win-sc:fileeffectiverights_item.
+	<br/><br/>In most cases, the relevant OVAL Test name should be used to update the test, object, state, and item components of the <span style="font-family: 'Courier New'">element_mapping</span> construct with [*]_test, [*]_object, [*]_state, and [*]_item. With that said, it is important to note that it is also possible to map new OVAL Tests to existing OVAL Items as exemplified with the <span style="font-family: 'Courier New'">win-def:fileeffectiverights53_test</span> and <span style="font-family: 'Courier New'">win-sc:fileeffectiverights_item</span>.
 	<br/><br/>The <span style="font-family: 'Courier New'">target_namespace</span> attribute identifies the namespace URI of the platform-specific OVAL System Characteristics Model associated with the OVAL Test.</td>
     </tr>
 	<tr>
@@ -325,7 +326,7 @@ Please consult the following table which details the modifications required to f
   <tbody>
     <tr>
       <td>01</td>
-      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[\*]_item” in accordance with [Section 4.2.5](#4-2-5-items).</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[*]_item” in accordance with <a href="#4-2-5-items">Section 4.2.5</a>.</td>
     </tr>
     <tr>
       <td>03</td>
@@ -435,7 +436,7 @@ In the OVAL Language, the OVAL Object defines what posture attribute data should
 47                                    </xsd:element>
 48                                    <xsd:element name="filename" type="oval-def:EntityObjectStringType" nillable="true">
 49                                        <xsd:annotation>
-50                                            <xsd:documentation>The filename element specifies the name of a file to evaluate. If the xsi:nil attribute is set to true, then the object being specified is the higher level directory object (not all the files in the directory). In this case, the filename element should not be used during collection and would result in the unique set of items being the directories themselves. For example, one would set xsi:nil to true if the desire was to test the attributes or permissions associated with a directory. Setting xsi:nil equal to true is different than using a \.\* pattern match, which says to collect every file under a given path.</xsd:documentation>
+50                                            <xsd:documentation>The filename element specifies the name of a file to evaluate. If the xsi:nil attribute is set to true, then the object being specified is the higher level directory object (not all the files in the directory). In this case, the filename element should not be used during collection and would result in the unique set of items being the directories themselves. For example, one would set xsi:nil to true if the desire was to test the attributes or permissions associated with a directory. Setting xsi:nil equal to true is different than using a .* pattern match, which says to collect every file under a given path.</xsd:documentation>
 51                                            ...
 52                                        </xsd:annotation>
 53                                    </xsd:element>
@@ -463,7 +464,7 @@ Please consult the following table which details the modifications required to f
   <tbody>
     <tr>
       <td>01</td>
-      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[\*]_object” in accordance with [Section 4.2.3](#4-2-3-objects).</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[*]_object” in accordance with <a href="#4-2-3-objects">Section 4.2.3</a>.</td>
     </tr>
     <tr>
       <td>03</td>
@@ -484,7 +485,7 @@ Please consult the following table which details the modifications required to f
     </tr>
     <tr>
       <td>26</td>
-      <td>Some OVAL Objects permit the use of <span style="font-family: 'Courier New'">behaviors</span> to govern endpoint collection.  The usage of <span style="font-family: 'Courier New'">behaviors</span> should be well documented in the OVAL Object's <span style="font-family: 'Courier New'">documentation</span> element(s).  Please see [Section 3.1.2.1.3](#3-1-2-1-3-designing-oval-behaviors) for more information when implementing a new OVAL Behavior.</td>
+      <td>Some OVAL Objects permit the use of <span style="font-family: 'Courier New'">behaviors</span> to govern endpoint collection.  The usage of <span style="font-family: 'Courier New'">behaviors</span> should be well documented in the OVAL Object's <span style="font-family: 'Courier New'">documentation</span> element(s).  Please see <a href="#3-1-2-1-3-designing-oval-behaviors">Section 3.1.2.1.3</a> for more information when implementing a new OVAL Behavior.</td>
     </tr>
 	<tr>
       <td>27</td>
@@ -494,7 +495,7 @@ Please consult the following table which details the modifications required to f
       <td>27-55</td>
       <td>OVAL Object Entities are defined using an <span style="font-family: 'Courier New'">element</span> with a unique name. Each entity declares one parameter with which the scope of the OVAL Item search on the endpoint can be defined. OVAL Object Entities may be of a common or custom defined <span style="font-family: 'Courier New'">type</span>. Common OVAL datatypes are found in the <span style="font-family: 'Courier New'">oval:DatatypeEnumeration</span> construct within the OVAL Common Model. These datatypes may be utilized with the available <span style="font-family: 'Courier New'">oval-def:EntityObject[...]Type</span> types as defined in the OVAL Definitions Model.  
 	<br/><br/>The <span style="font-family: 'Courier New'">documentation</span> element is used to define the constraints or patterns expected from the value when used. 
-	<br/><br/>Furthermore, OVAL Object Entities may be <span style="font-family: 'Courier New'">nillable</span>. When an OVAL Object Entity is <span style="font-family: 'Courier New'">nillable</span>, the expected interpretation of this value should be documented in the child documentation element.  For more information about <span style="font-family: 'Courier New'">nillable</span> OVAL Object Entities, please see [Section 3.1.2.1.1](#3-1-2-1-1-nillable-oval-object-entities).
+	<br/><br/>Furthermore, OVAL Object Entities may be <span style="font-family: 'Courier New'">nillable</span>. When an OVAL Object Entity is <span style="font-family: 'Courier New'">nillable</span>, the expected interpretation of this value should be documented in the child documentation element.  For more information about <span style="font-family: 'Courier New'">nillable</span> OVAL Object Entities, please see <a href="#3-1-2-1-1-nillable-oval-object-entities">Section 3.1.2.1.1</a>.
 	<br/><br/>Lastly, additional restrictions may be placed on OVAL Object Entities through embedded Schematron rules within an element.  For example, the <span style="font-family: 'Courier New'">filename</span> entity in the <span style="font-family: 'Courier New'">win-def:file_object</span> checks values for characters that are not permitted in Windows file names.  Please adhere to Schematron best practices when defining these rules.</td>
     </tr>
 	<tr>
@@ -563,11 +564,11 @@ Please consult the following table which details the required modifications to f
   <tbody>
     <tr>
       <td>01</td>
-      <td>The <span style="font-family: 'Courier New'">name</span> attribute would be assigned according to [Section 4.1.9](#4-1-9-behavior)</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute would be assigned according to <a href="#4-1-9-behavior">Section 4.1.9</a></td>
     </tr>
     <tr>
       <td>06</td>
-      <td>Each Behavior is defined using an <span style="font-family: 'Courier New'">attribute</span> construct with a unique <span style="font-family: 'Courier New'">name</span> attribute. These values should adhere to the rules defined in [Section 4.2.3.1](#4-2-3-1-behaviors).  The <span style="font-family: 'Courier New'">use</span> attribute is set to “optional” since a default attribute value should always be defined.  The <span style="font-family: 'Courier New'">default</span> attribute declares which value is supplied to the OVAL Behavior when not explicitly declared.</td>
+      <td>Each Behavior is defined using an <span style="font-family: 'Courier New'">attribute</span> construct with a unique <span style="font-family: 'Courier New'">name</span> attribute. These values should adhere to the rules defined in <a href="#4-2-3-1-behaviors">Section 4.2.3.1</a>.  The <span style="font-family: 'Courier New'">use</span> attribute is set to “optional” since a default attribute value should always be defined.  The <span style="font-family: 'Courier New'">default</span> attribute declares which value is supplied to the OVAL Behavior when not explicitly declared.</td>
     </tr>
 	<tr>
       <td>07-11</td>
@@ -642,7 +643,7 @@ Please consult the following table which details the required modifications to f
   <tbody>
     <tr>
       <td>01</td>
-      <td>The <span style="font-family: 'Courier New'">name</span> attribute would be assigned the value of “[\*]_state” according to [Section 4.2.4](#4-2-4-states).</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute would be assigned the value of “[*]_state” according to <a href="#4-2-4-states">Section 4.2.4</a>.</td>
     </tr>
     <tr>
       <td>03</td>
@@ -722,7 +723,7 @@ The following table highlights the key aspects to consider when creating a new O
     </tr>
     <tr>
       <td>09</td>
-      <td>The <span style="font-family: 'Courier New'">complexType</span> element will define the OVAL Function type.  It should be assigned a <span style="font-family: 'Courier New'">name</span> according to [Section 4.1.11](#4-1-11-functions).</td>
+      <td>The <span style="font-family: 'Courier New'">complexType</span> element will define the OVAL Function type.  It should be assigned a <span style="font-family: 'Courier New'">name</span> according to <a href="#4-1-11-functions">Section 4.1.11</a>.</td>
     </tr>
 	<tr>
       <td>11-12</td>
@@ -829,7 +830,7 @@ new entity type construct.
   <tbody>
     <tr>
       <td>01</td>
-      <td>The <span style="font-family: 'Courier New'">name</span> attribute would be assigned the value according to [Section 4.1.12](#4-1-12-entities).</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute would be assigned the value according to <a href="#4-1-12-entities">Section 4.1.12</a>.</td>
     </tr>
     <tr>
       <td>02</td>
@@ -883,7 +884,7 @@ Please consult the following table which details the key features of the sample 
   <tbody>
     <tr>
       <td>01</td>
-      <td>The <span style="font-family: 'Courier New'">name</span> attribute would be assigned the value according to [Section 4.1.3](#4-1-3-enumerations).</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute would be assigned the value according to <a href="#4-1-3-enumerations">Section 4.1.3</a>.</td>
     </tr>
     <tr>
       <td>03</td>
