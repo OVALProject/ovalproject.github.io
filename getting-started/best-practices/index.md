@@ -245,7 +245,7 @@ The following table goes through the schema line-by-line and details the modific
   <tbody>
     <tr>
       <td>01</td>
-      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[*]_test” in accordance with <a href="#4-2-2-tests">Section 4.2.2</a>.</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[\*]_test” in accordance with <a href="#4-2-2-tests">Section 4.2.2</a>.</td>
     </tr>
     <tr>
       <td>03</td>
