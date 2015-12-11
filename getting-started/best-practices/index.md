@@ -12,77 +12,77 @@ layout: flat
 [Feedback](#feedback)
 
 1. [Introduction](#1-introduction)
-  1. [Prerequisites](#11-prerequisites)
-  2. [Extension Development Process](#12-extension-development-process)
-    1. [Identify](#121-identify)
-	2. [Research](#122-research)
-	3. [Implement](#123-implement)
-	4. [Discuss](#124-discuss)
-	5. [Refine](#125-refine)
-  3. [Useful Tools and Resources for OVAL Development](#13-useful-tools-and-resources-for-oval-development)
-    1. [Tools](#131-tools)
-	2. [Resources](#132-resources)
-  4. [OVAL Revision Process](#14-oval-revision-process)
-  5. [OVAL Versioning Policy](#15-oval-versioning-policy)
-  6. [Conventions Used in this Document](#16-conventions-used-in-this-document)
-    1. [OVAL Design Principle](#161-oval-design-principle)
+  1. [Prerequisites](#1-1-prerequisites)
+  2. [Extension Development Process](#1-2-extension-development-process)
+    1. [Identify](#1-2-1-identify)
+	2. [Research](#1-2-2-research)
+	3. [Implement](#1-2-3-implement)
+	4. [Discuss](#1-2-4-discuss)
+	5. [Refine](#1-2-5-refine)
+  3. [Useful Tools and Resources for OVAL Development](#1-3-useful-tools-and-resources-for-oval-development)
+    1. [Tools](#1-3-1-tools)
+	2. [Resources](#1-3-2-resources)
+  4. [OVAL Revision Process](#1-4-oval-revision-process)
+  5. [OVAL Versioning Policy](#1-5-oval-versioning-policy)
+  6. [Conventions Used in this Document](#1-6-conventions-used-in-this-document)
+    1. [OVAL Design Principle](#1-6-1-oval-design-principle)
 2. [Structure of the OVAL Language](#2-structure-of-the-oval-language)
-  1. [OVAL Core Models](#21-oval-core-models)
-    1. [OVAL Common Model](#211-oval-common-model)
-    2. [OVAL Variables Model](#212-oval-variables-model)
-    3. [OVAL Definitions Model](#213-oval-definitions-model)
-    4. [OVAL System Characteristics Model](#214-oval-system-characteristics-model)
-    5. [OVAL Results Model](#215-oval-results-model)
-    6. [OVAL Directives Model](#216-oval-directives-model)
-  2. [OVAL Platform Extension Models](#22-oval-platform-extension-models)
+  1. [OVAL Core Models](#2-1-oval-core-models)
+    1. [OVAL Common Model](#2-1-1-oval-common-model)
+    2. [OVAL Variables Model](#2-1-2-oval-variables-model)
+    3. [OVAL Definitions Model](#2-1-3-oval-definitions-model)
+    4. [OVAL System Characteristics Model](#2-1-4-oval-system-characteristics-model)
+    5. [OVAL Results Model](#2-1-5-oval-results-model)
+    6. [OVAL Directives Model](#2-1-6-oval-directives-model)
+  2. [OVAL Platform Extension Models](#2-2-oval-platform-extension-models)
 3. [Extending the OVAL Language](#3-extending-the-oval-language)
-  1. [Designing an OVAL Test](#31-designing-an-oval-test)
-    1. [Designing an OVAL Item](#311-designing-an-oval-item)
-    2. [Designing an OVAL Object](#312-designing-an-oval-object)
-    3. [Designing an OVAL State](#313-designing-an-oval-state)
-  2. [Designing an OVAL Function](#32-designing-an-oval-function)
-  3. [Designing an OVAL Datatype](#33-designing-an-oval-datatype)
-    1. [Simple or Complex](#331-simple-or-complex)
-    2. [Implications to Casting](#332-implications-to-casting)
-    3. [Entity Type Constructs](#333-entity-type-constructs)
-  4. [Designing an OVAL Enumeration](#34-designing-an-oval-enumeration)
-  5. [Determining Where an Extension Belongs](#35-determining-where-an-extension-belongs)
-    1. [OVAL Tests and their Corresponding Objects, States, Items](#351-oval-tests-and-their-corresponding-objects-states-items)
-    2. [OVAL Function](#352-oval-function)
-    3. [OVAL Datatype](#353-oval-datatype)
-    4. [Other](#354-other)
+  1. [Designing an OVAL Test](#3-1-designing-an-oval-test)
+    1. [Designing an OVAL Item](#3-1-1-designing-an-oval-item)
+    2. [Designing an OVAL Object](#3-1-2-designing-an-oval-object)
+    3. [Designing an OVAL State](#3-1-3-designing-an-oval-state)
+  2. [Designing an OVAL Function](#3-2-designing-an-oval-function)
+  3. [Designing an OVAL Datatype](#3-3-designing-an-oval-datatype)
+    1. [Simple or Complex](#3-3-1-simple-or-complex)
+    2. [Implications to Casting](#3-3-2-implications-to-casting)
+    3. [Entity Type Constructs](#3-3-3-entity-type-constructs)
+  4. [Designing an OVAL Enumeration](#3-4-designing-an-oval-enumeration)
+  5. [Determining Where an Extension Belongs](#3-5-determining-where-an-extension-belongs)
+    1. [OVAL Tests and their Corresponding Objects, States, Items](#3-5-1-oval-tests-and-their-corresponding-objects-states-items)
+    2. [OVAL Function](#3-5-2-oval-function)
+    3. [OVAL Datatype](#3-5-3-oval-datatype)
+    4. [Other](#3-5-4-other)
 4. [Naming conventions](#4-naming-conventions)
-  1. [Schema Constructs](#41-schema-constructs)
-    1. [General Conventions](#411-general-conventions)
-    2. [Types](#412-types)
-    3. [Enumerations](#413-enumerations)
-    4. [Keys](#414-keys)
-    5. [OVAL Identifier Pattern](#415-oval-identifier-pattern)
-    6. [Schematron Pattern Identifier](#416-schematron-pattern-identifier)
-    7. [Unique](#417-unique)
-    8. [Component](#418-component)
-    9. [Groups](#419-groups)
-    10. [Functions](#4110-functions)
-    11. [Entities](#4111-entities)
-  2. [XML Constructs](#42-xml-constructs)
-    1. [General Conventions](#421-general-conventions)
-    2. [Tests](#422-tests)
-    3. [Objects](#423-objects)
-    4. [States](#424-states)
-    5. [Items](#425-items)
-    6. [Object, State, and Item Entities](#426-object-state-and-item-entities)
-    7. [Functions](#427-functions)
-    8. [Datatypes](#428-datatypes)
-    9. [Enumerations](#429-enumerations)
+  1. [Schema Constructs](#4-1-schema-constructs)
+    1. [General Conventions](#4-1-1-general-conventions)
+    2. [Types](#4-1-2-types)
+    3. [Enumerations](#4-1-3-enumerations)
+    4. [Keys](#4-1-4-keys)
+    5. [OVAL Identifier Pattern](#4-1-5-oval-identifier-pattern)
+    6. [Schematron Pattern Identifier](#4-1-6-schematron-pattern-identifier)
+    7. [Unique](#4-1-7-unique)
+    8. [Component](#4-1-8-component)
+    9. [Groups](#4-1-9-groups)
+    10. [Functions](#4-1-10-functions)
+    11. [Entities](#4-1-11-entities)
+  2. [XML Constructs](#4-2-xml-constructs)
+    1. [General Conventions](#4-2-1-general-conventions)
+    2. [Tests](#4-2-2-tests)
+    3. [Objects](#4-2-3-objects)
+    4. [States](#4-2-4-states)
+    5. [Items](#4-2-5-items)
+    6. [Object, State, and Item Entities](#4-2-6-object-state-and-item-entities)
+    7. [Functions](#4-2-7-functions)
+    8. [Datatypes](#4-2-8-datatypes)
+    9. [Enumerations](#4-2-9-enumerations)
 5. [OVAL Extension Checklist](#5-oval-extension-checklist)
-  1. Submitting a New OVAL Component Schema(#51-submitting-a-new-oval-component-schema)
-  2. Submitting a New OVAL Core Capability(#52-submitting-a-new-oval-core-capability)
-  3. Submitting a New OVAL Test(#53-submitting-a-new-oval-test)
-  4. Submitting a New OVAL Entity(#54-submitting-a-new-oval-entity)
-  5. Adding a New OVAL Function(#55-addomg-a-new-oval-function)
-  6. Requests to Modify Existing OVAL Constructs(#56-requests-to-modify-existing-oval-constructs)
-  7. Requests to Deprecate OVAL Constructs(#57-requests-to-deprecate-oval-constructs)
-  8. Filling out the OVAL Proposal Form(#58-filling-out-the-oval-proposal-form)
+  1. Submitting a New OVAL Component Schema(#5-1-submitting-a-new-oval-component-schema)
+  2. Submitting a New OVAL Core Capability(#5-2-submitting-a-new-oval-core-capability)
+  3. Submitting a New OVAL Test(#5-3-submitting-a-new-oval-test)
+  4. Submitting a New OVAL Entity(#5-4-submitting-a-new-oval-entity)
+  5. Adding a New OVAL Function(#5-5-addomg-a-new-oval-function)
+  6. Requests to Modify Existing OVAL Constructs(#5-6-requests-to-modify-existing-oval-constructs)
+  7. Requests to Deprecate OVAL Constructs(#5-7-requests-to-deprecate-oval-constructs)
+  8. Filling out the OVAL Proposal Form(#5-8-filling-out-the-oval-proposal-form)
 6. [Sharing OVAL Language Extensions](#6-sharing-oval-language-extensions)
 
 ## Trademark Information
@@ -153,8 +153,8 @@ The OVAL Versioning Policy defines the methodology used to version the OVAL Lang
 
 ### 1.6 Conventions Used in this Document
 The following font and font style conventions are used throughout the remainder of this document:
-* The `Courier New` font is used for writing constructs in the OVAL Language Data Model.
-		Example: `file_test`
+* The <span style="font-family: 'Courier New'">Courier New</span> font is used for writing constructs in the OVAL Language Data Model.
+		Example: <span style="font-family: 'Courier New'">file_test</span>
 
 #### 1.6.1 OVAL Design Principle
 Much of this document will be discussing the various design principles to consider and use when developing extensions to the OVAL Language.  These principles are critical to developing quality extensions that can be used by the rest of the community.  In the document, design principles are highlighted in **bold** text.  For example:
@@ -193,9 +193,9 @@ The Core Models above provide a variety of extension points which can be extende
 The Core Models of the OVAL Language define a set of core capabilities, as described within the OVAL Language Specification, with numerous extension points. This section highlights the opportunities for extension within the Core Models of the OVAL Language as well as the design principles and best practices to follow when doing so.  Specifically, this includes extending the OVAL Language to include a new OVAL Test, OVAL Function, OVAL Datatype, and OVAL Type Enumeration as well as where an extension should be placed in the OVAL Language Data Model.
 
 ### 3.1 Designing an OVAL Test
-OVAL Tests serve as the mechanism for combining an OVAL Object (what data to collect) with one or more OVAL States (the expected state of the collected data).  When creating a new OVAL Test in an OVAL Platform Extension Model, the OVAL Test must extend the abstract OVAL Definitions Model `oval-def:TestType` construct.  Creating a new OVAL Test is quite straight forward and is as simple as taking an existing OVAL Test from the schema, copying it, pasting it, and then modifying it.  The majority of the real work is in designing the OVAL Object and OVAL Item.  All OVAL Tests are exactly the same with the exception of a few minor details.  First, is the documentation associated with the OVAL Test.  Each OVAL Test should have documentation that explains what it does.  Next, the `oval:element_mapping` construct, which documents the OVAL Object, State, and Item that is associated with the OVAL Test, needs to be updated appropriately.  Lastly, the Schematron rules that ensure that the OVAL Test references an OVAL Object and OVAL States of the correct type needs to be updated to reflect the new constructs.  
+OVAL Tests serve as the mechanism for combining an OVAL Object (what data to collect) with one or more OVAL States (the expected state of the collected data).  When creating a new OVAL Test in an OVAL Platform Extension Model, the OVAL Test must extend the abstract OVAL Definitions Model <span style="font-family: 'Courier New'">oval-def:TestType</span> construct.  Creating a new OVAL Test is quite straight forward and is as simple as taking an existing OVAL Test from the schema, copying it, pasting it, and then modifying it.  The majority of the real work is in designing the OVAL Object and OVAL Item.  All OVAL Tests are exactly the same with the exception of a few minor details.  First, is the documentation associated with the OVAL Test.  Each OVAL Test should have documentation that explains what it does.  Next, the <span style="font-family: 'Courier New'">oval:element_mapping</span> construct, which documents the OVAL Object, State, and Item that is associated with the OVAL Test, needs to be updated appropriately.  Lastly, the Schematron rules that ensure that the OVAL Test references an OVAL Object and OVAL States of the correct type needs to be updated to reflect the new constructs.  
 
-Below is the schema for the `win-def:file_test` which demonstrates a typical OVAL Test in the OVAL Language.
+Below is the schema for the <span style="font-family: 'Courier New'">win-def:file_test</span> which demonstrates a typical OVAL Test in the OVAL Language.
 
 ```xml
 01<xsd:element name="file_test" substitutionGroup="oval-def:test">
@@ -235,7 +235,7 @@ Below is the schema for the `win-def:file_test` which demonstrates a typical OVA
 
 The schema for win-def:file_test<sup id="a15">[15](#f15)</sup>
 
-The following table goes through the schema line-by-line and details the modifications required to create a new OVAL Test.  For simplicity, the OVAL Test’s name “file” is replaced with “[*]”.
+The following table goes through the schema line-by-line and details the modifications required to create a new OVAL Test.  For simplicity, the OVAL Test’s name “file” is replaced with “[\*]”.
 <table>
   <tr>
     <th>Line(s)</th>
@@ -244,31 +244,31 @@ The following table goes through the schema line-by-line and details the modific
   <tbody>
     <tr>
       <td>01</td>
-      <td>The `name` attribute is assigned a value of “[*]_test” in accordance with Section 4.2.2.</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[\*]_test” in accordance with [Section 4.2.2](#4-2-2-tests).</td>
     </tr>
     <tr>
       <td>03</td>
-      <td>The `documentation` element describes what endpoint metadata this particular OVAL Test is designed to collect and evaluate.  Any necessary clarifications to the scope of this OVAL Test should be provided here. </td>
+      <td>The <span style="font-family: 'Courier New'">documentation</span> element describes what endpoint metadata this particular OVAL Test is designed to collect and evaluate.  Any necessary clarifications to the scope of this OVAL Test should be provided here. </td>
     </tr>
 	<tr>
       <td>05-09</td>
-      <td>The `element_mapping` construct explicitly correlates the associated OVAL Test, Object, State, and Item constructs and must always be present.
-	<br/><br/>In most cases, the relevant OVAL Test name should be used to update the test, object, state, and item components of the `element_mapping` construct with [*]_test, [*]_object, [*]_state, and [*]_item.  With that said, it is important to note that it is also possible to map new OVAL Tests to existing OVAL Items as exemplified with the win-def:fileeffectiverights53_test and win-sc:fileeffectiverights_item.
-	<br/><br/>The `target_namespace` attribute identifies the namespace URI of the platform-specific OVAL System Characteristics Model associated with the OVAL Test.</td>
+      <td>The <span style="font-family: 'Courier New'">element_mapping</span> construct explicitly correlates the associated OVAL Test, Object, State, and Item constructs and must always be present.
+	<br/><br/>In most cases, the relevant OVAL Test name should be used to update the test, object, state, and item components of the <span style="font-family: 'Courier New'">element_mapping</span> construct with [\*]_test, [\*]_object, [\*]_state, and [\*]_item.  With that said, it is important to note that it is also possible to map new OVAL Tests to existing OVAL Items as exemplified with the win-def:fileeffectiverights53_test and win-sc:fileeffectiverights_item.
+	<br/><br/>The <span style="font-family: 'Courier New'">target_namespace</span> attribute identifies the namespace URI of the platform-specific OVAL System Characteristics Model associated with the OVAL Test.</td>
     </tr>
 	<tr>
       <td>13-20</td>
-      <td>All OVAL Tests have their own Schematron rules for verifying that they only reference the associated OVAL Objects and States as defined in the `element_mapping`. Please adhere to Schematron best practices when defining these rules.</td>
+      <td>All OVAL Tests have their own Schematron rules for verifying that they only reference the associated OVAL Objects and States as defined in the <span style="font-family: 'Courier New'">element_mapping</span>. Please adhere to Schematron best practices when defining these rules.</td>
     </tr>
 	<tr>
       <td>23-32</td>
-      <td>This `complexType` element must always be present and verbatim for every OVAL Test. Every OVAL Test extends the `oval-def:TestType` construct and contains one `object` element followed by zero or more `state` elements.</td>
+      <td>This <span style="font-family: 'Courier New'">complexType</span> element must always be present and verbatim for every OVAL Test. Every OVAL Test extends the <span style="font-family: 'Courier New'">oval-def:TestType</span> construct and contains one <span style="font-family: 'Courier New'">object</span> element followed by zero or more <span style="font-family: 'Courier New'">state</span> elements.</td>
     </tr>
   </tbody>
 </table>
 
 #### 3.1.1 Designing an OVAL Item
-The first step in designing a new OVAL Item for the OVAL Language is to determine what posture attribute data needs to be collected off of an endpoint as well as justification for doing so.  In its simplest form, an OVAL Item is a logical set of entities that model posture attribute data collected from an endpoint.  Typically, this posture attribute data consists of information that uniquely identifies the system structure on the endpoint as well as additional metadata about that system structure that may need to be assessed.  This could be a registry key on a Windows endpoint, a process on a UNIX endpoint, or an installed RPM on a Red Hat Linux endpoint.  Each OVAL Item should have a name that follows the conventions in Section 4.2.5 and extends the abstract `oval-sc:ItemType` construct in the OVAL System Characteristics Model.  Below is an excerpt from the schema for the `win-sc:file_item` which demonstrates a typical OVAL Item in the OVAL Language.
+The first step in designing a new OVAL Item for the OVAL Language is to determine what posture attribute data needs to be collected off of an endpoint as well as justification for doing so.  In its simplest form, an OVAL Item is a logical set of entities that model posture attribute data collected from an endpoint.  Typically, this posture attribute data consists of information that uniquely identifies the system structure on the endpoint as well as additional metadata about that system structure that may need to be assessed.  This could be a registry key on a Windows endpoint, a process on a UNIX endpoint, or an installed RPM on a Red Hat Linux endpoint.  Each OVAL Item should have a name that follows the conventions in [Section 4.2.5](#4-2-5-items) and extends the abstract <span style="font-family: 'Courier New'">oval-sc:ItemType</span> construct in the OVAL System Characteristics Model.  Below is an excerpt from the schema for the <span style="font-family: 'Courier New'">win-sc:file_item</span> which demonstrates a typical OVAL Item in the OVAL Language.
 
 ```xml
 01<xsd:element name="file_item" substitutionGroup="oval-sc:item">
@@ -315,7 +315,7 @@ therefore it is strongly suggested that this entity be set.</xsd:documentation>
 
 Truncated schema for win-sc:file_item<sup id="a16">[16](#f16)</sup>
 
-Please consult the following table which details the modifications required to form a new OVAL Item using the sample schema.  For simplicity, the OVAL Item’s name “file” is replaced with “[*]”.
+Please consult the following table which details the modifications required to form a new OVAL Item using the sample schema.  For simplicity, the OVAL Item’s name “file” is replaced with “[\*]”.
 
 <table>
   <tr>
@@ -325,23 +325,23 @@ Please consult the following table which details the modifications required to f
   <tbody>
     <tr>
       <td>01</td>
-      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[*]_item” in accordance with Section 4.2.5.</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[\*]_item” in accordance with [Section 4.2.5](#4-2-5-items).</td>
     </tr>
     <tr>
       <td>03</td>
-      <td>The `documentation` element describes how metadata may be retrieved from the endpoint. This should not limit implementations, but rather guide them towards examples of your intended metadata and potential methods of collection.</td>
+      <td>The <span style="font-family: 'Courier New'">documentation</span> element describes how metadata may be retrieved from the endpoint. This should not limit implementations, but rather guide them towards examples of your intended metadata and potential methods of collection.</td>
     </tr>
 	<tr>
       <td>05-08</td>
-      <td>The `complexType ... sequence` elements enforce the ordering of OVAL Item Entities in an OVAL Item.  It is important that the ordering of OVAL State Entities match the ordering of OVAL Item Entities.</td>
+      <td>The <span style="font-family: 'Courier New'">complexType ... sequence</span> elements enforce the ordering of OVAL Item Entities in an OVAL Item.  It is important that the ordering of OVAL State Entities match the ordering of OVAL Item Entities.</td>
     </tr>
 	<tr>
       <td>10</td>
-      <td>Each OVAL Item Entity should be represented as an `element` with a unique name. If an OVAL Item Entity is capable of having multiple values, it should be represented by multiple occurrences of the element which can be permitted by setting the `maxOccurs` attribute to “unbounded”.  The default value for the attribute is “1”.  The `minOccurs` attribute must always be set to “0” to allow OVAL Item entities to be omitted at the discretion of an OVAL System Characteristics Producer.  The `type` attribute is used to specify what data format should be used to parse the returned Item entity value.  The list of permitted OVAL datatypes is found in the `oval:DatatypeEnumeration` construct in the OVAL Common Model.  These datatypes are utilized with the available `oval-sc:EntityItem[...]Type` constructs defined in the OVAL System Characteristics Model.  Additional datatypes, unique to a platform, may also be present in the appropriate platform-specific OVAL System Characteristics Model.  If the `nillable` attribute is set to “true”, then ensure that the appropriate use cases, as defined in the corresponding OVAL Object Entity, are described in the `documentation` element. </td>
+      <td>Each OVAL Item Entity should be represented as an <span style="font-family: 'Courier New'">element</span> with a unique name. If an OVAL Item Entity is capable of having multiple values, it should be represented by multiple occurrences of the element which can be permitted by setting the <span style="font-family: 'Courier New'">maxOccurs</span> attribute to “unbounded”.  The default value for the attribute is “1”.  The <span style="font-family: 'Courier New'">minOccurs</span> attribute must always be set to “0” to allow OVAL Item entities to be omitted at the discretion of an OVAL System Characteristics Producer.  The <span style="font-family: 'Courier New'">type</span> attribute is used to specify what data format should be used to parse the returned Item entity value.  The list of permitted OVAL datatypes is found in the <span style="font-family: 'Courier New'">oval:DatatypeEnumeration</span> construct in the OVAL Common Model.  These datatypes are utilized with the available <span style="font-family: 'Courier New'">oval-sc:EntityItem[...]Type</span> constructs defined in the OVAL System Characteristics Model.  Additional datatypes, unique to a platform, may also be present in the appropriate platform-specific OVAL System Characteristics Model.  If the <span style="font-family: 'Courier New'">nillable</span> attribute is set to “true”, then ensure that the appropriate use cases, as defined in the corresponding OVAL Object Entity, are described in the <span style="font-family: 'Courier New'">documentation</span> element. </td>
     </tr>
 	<tr>
       <td>11-12</td>
-      <td>Each OVAL Item Entity should have a descriptive `documentation` element that concisely describes what the element represents, and provide any units necessary for interpretation.  Possible entity values should be explained when they may be ambiguous or represent special cases.  One such example is the `win-sc:registry_item`, where an empty string value for the name entity, denotes the default value of the key should be collected.</td>
+      <td>Each OVAL Item Entity should have a descriptive <span style="font-family: 'Courier New'">documentation</span> element that concisely describes what the element represents, and provide any units necessary for interpretation.  Possible entity values should be explained when they may be ambiguous or represent special cases.  One such example is the <span style="font-family: 'Courier New'">win-sc:registry_item</span>, where an empty string value for the name entity, denotes the default value of the key should be collected.</td>
     </tr>
 	<tr>
       <td>22,28</td>
@@ -367,23 +367,23 @@ This design principle is probably the most important when extending the OVAL Lan
 
 Typically, these system structures have a way to uniquely identify them on the endpoint whether there is a single unique identifier (e.g. process identifier, security identifier, etc.) or a collection of identifiers (e.g. path and filename for a file, hive, key, and name for a registry key, etc.) and can usually be derived from how the platform identifies these constructs in system-level APIs, command line tools, and graphical interfaces.  Beyond that, these system structures also have metadata that the vendor exposes which can make up the rest of an OVAL Item.  This metadata might include things like account privileges, file sizes, registry key values, arguments process arguments among other things.
 
-Two great examples of why it is important to follow this design principle are the macos-sc:diskutil_item and the macos-sc:passwordpolicy59_item.  Unfortunately, both OVAL Items are based off of command line utilities (diskutil(8) and pwpolicy(8)) with OVAL Item entities mirroring arguments taken by the utility.  As a result, it almost limits tool developers to use the respective commands to collect the information (unless the system-level APIs take the same arguments) or at best strongly suggests that the command should be used although OVAL is not supposed to dictate how the information is collected as long as it is accurate.  Furthermore, the macos-def:diskutil_item only provides information about the verification of permissions on an endpoint even though the diskutil command on Mac OSX provides many more capabilities.  If it was ever decided to add support for these capabilities, the OVAL Test would quickly become very complicated and cumbersome.  Better examples of OVAL Items that follow this design principle include the win-sc:registry_item, win-sc:file_item, and unix-sc:process_item among others where they all model a specific system-level structure on the endpoint and are supplemented by metadata about those structures.
+Two great examples of why it is important to follow this design principle are the <span style="font-family: 'Courier New'">macos-sc:diskutil_item</span> and the <span style="font-family: 'Courier New'">macos-sc:passwordpolicy59_item</span>.  Unfortunately, both OVAL Items are based off of command line utilities (diskutil(8) and pwpolicy(8)) with OVAL Item entities mirroring arguments taken by the utility.  As a result, it almost limits tool developers to use the respective commands to collect the information (unless the system-level APIs take the same arguments) or at best strongly suggests that the command should be used although OVAL is not supposed to dictate how the information is collected as long as it is accurate.  Furthermore, the <span style="font-family: 'Courier New'">macos-def:diskutil_item</span> only provides information about the verification of permissions on an endpoint even though the diskutil command on Mac OSX provides many more capabilities.  If it was ever decided to add support for these capabilities, the OVAL Test would quickly become very complicated and cumbersome.  Better examples of OVAL Items that follow this design principle include the <span style="font-family: 'Courier New'">win-sc:registry_item</span>, <span style="font-family: 'Courier New'">win-sc:file_item</span>, and <span style="font-family: 'Courier New'">unix-sc:process_item</span> among others where they all model a specific system-level structure on the endpoint and are supplemented by metadata about those structures.
 
-It should also be noted that there have been a few cases over the years (win-sc:cmdlet_item, win-sc:wmi_item, and the netconf-sc:config_item) where the OVAL Language was extended to support specific collection mechanisms in defiance of this design principle albeit undocumented at the time.  In these cases, the community believed that the benefits of adding these tests would outweigh breaking the design principle.  Specifically, providing access to these large data stores would address the short-term needs of the community while new OVAL Items that better align with this design principle would be developed and incorporated into an official release.  Moving forward, it may make sense to add a few more OVAL Items that model collection mechanisms, but, it should be thoroughly discussed first and should be the exception to the rule.
+It should also be noted that there have been a few cases over the years (<span style="font-family: 'Courier New'">win-sc:cmdlet_item</span>, <span style="font-family: 'Courier New'">win-sc:wmi_item</span>, and the <span style="font-family: 'Courier New'">netconf-sc:config_item</span>) where the OVAL Language was extended to support specific collection mechanisms in defiance of this design principle albeit undocumented at the time.  In these cases, the community believed that the benefits of adding these tests would outweigh breaking the design principle.  Specifically, providing access to these large data stores would address the short-term needs of the community while new OVAL Items that better align with this design principle would be developed and incorporated into an official release.  Moving forward, it may make sense to add a few more OVAL Items that model collection mechanisms, but, it should be thoroughly discussed first and should be the exception to the rule.
 
 **Design Principle: An OVAL Item MUST NOT combine multiple system-level structures**
  
-When designing a new OVAL Item, it is sometimes tempting to overload the OVAL Item to cover all of the system-level structures especially if the metadata being collected about each is the same.  This should not be done because it introduces additional and unnecessary complexity when it comes to designing the OVAL Object and OVAL Item.  A good example of this is the linux-sc:selinuxsecuritycontext_item which includes the filepath, path, and filename entities for collecting the SELinux security context of a file and the pid entity for collecting the SELinux security context of a process.  Due to this design, the corresponding OVAL Object needed to include a choice between filepath, path and filename, and pid as well as behaviors to control how files are collected off of the endpoint.  This additional complexity can introduce opportunities for confusion for content authors who try to write content for the test as well as may potentially make it more difficult for tool developers to implement in their products.  A better design for this OVAL Item would be to break it out into two separate OVAL Items: one for collecting the SELinux security context of files and another for collecting the SELinux security context of processes.  This would reduce complexity in the corresponding OVAL Objects and OVAL Items and avoids even messier constructs if it was ever decided that the OVAL Language should be extended to support the collection of security contexts associated with other system structures (network interfaces, ports, etc.).  A few examples of OVAL Items that follow this design principle are the various effective rights and audit permissions items, in the Windows Platform Extension Model, where an OVAL Item exists for each of the different system-level structures (e.g. registry, file, service, etc.).  Another example of an OVAL Test that doesn't align with this design principle is the unix-def:gconf_object which supports the collection of GConf data either from an XML file or from the GConf daemon.  In retrospect, there should really be two GConf related tests.  One for accessing the data via an XML file and another for accessing the data via the daemon.
+When designing a new OVAL Item, it is sometimes tempting to overload the OVAL Item to cover all of the system-level structures especially if the metadata being collected about each is the same.  This should not be done because it introduces additional and unnecessary complexity when it comes to designing the OVAL Object and OVAL Item.  A good example of this is the <span style="font-family: 'Courier New'">linux-sc:selinuxsecuritycontext_item</span> which includes the <span style="font-family: 'Courier New'">filepath</span>, <span style="font-family: 'Courier New'">path</span>, and <span style="font-family: 'Courier New'">filename</span> entities for collecting the SELinux security context of a file and the <span style="font-family: 'Courier New'">pid</span> entity for collecting the SELinux security context of a process.  Due to this design, the corresponding OVAL Object needed to include a choice between <span style="font-family: 'Courier New'">filepath</span>, <span style="font-family: 'Courier New'">path</span> and <span style="font-family: 'Courier New'">filename</span>, and <span style="font-family: 'Courier New'">pid</span> as well as behaviors to control how files are collected off of the endpoint.  This additional complexity can introduce opportunities for confusion for content authors who try to write content for the test as well as may potentially make it more difficult for tool developers to implement in their products.  A better design for this OVAL Item would be to break it out into two separate OVAL Items: one for collecting the SELinux security context of files and another for collecting the SELinux security context of processes.  This would reduce complexity in the corresponding OVAL Objects and OVAL Items and avoids even messier constructs if it was ever decided that the OVAL Language should be extended to support the collection of security contexts associated with other system structures (network interfaces, ports, etc.).  A few examples of OVAL Items that follow this design principle are the various effective rights and audit permissions items, in the Windows Platform Extension Model, where an OVAL Item exists for each of the different system-level structures (e.g. registry, file, service, etc.).  Another example of an OVAL Test that doesn't align with this design principle is the <span style="font-family: 'Courier New'">unix-def:gconf_object</span> which supports the collection of GConf data either from an XML file or from the GConf daemon.  In retrospect, there should really be two GConf related tests.  One for accessing the data via an XML file and another for accessing the data via the daemon.
 
 **Design Principle: OVAL Items SHOULD only include the OVAL Entities that the community requires**
 
 As platforms evolve and emerge, the OVAL Language must keep pace in order to provide the community with a robust assessment format, however, this must be carefully balanced with over developing the OVAL Language and filling it with features that no one in the community will ever use.  That is, just because something can be collected off of an endpoint, it doesn’t mean that it needs to be collected off of an endpoint.  With the revised OVAL Language Versioning Policy that allows for the models to be versioned independently, it should be much easier to add new features, in a timely fashion, as they are needed in the future.  
 
 ##### 3.1.1.1 Designing an OVAL Item Entity
-When designing an OVAL Item Entity, a name should be selected that follows the naming conventions for XML Constructs (Section 4.2.6).  From there, an entity type must be selected from the OVAL System Characteristics Model (e.g.  oval-sc:EntityItemStringType, oval-sc:EntityItemIntType, oval-sc:EntityItemVersionType, etc.) or an enumeration of string values must be created in the corresponding platform-specific OVAL System Characteristics Model.  If none of the existing entity types apply and an enumeration of string values is not appropriate then it may make sense to add a new datatype to the OVAL Language in accordance with Section 4.2.8.   Next, the entity should be assigned a minOccurs=”0” and a maxOccurs=”1” or “unbounded” if multiple values may be present for a particular entity.  Every entity has a minOccurs=”0” so that tools can leave it out if they so choose (e.g. for optimization reasons, etc.).  It must be determined if the entity should be nillable.  This is driven by the design of the OVAL Object Entities and whether or not they are nillable which is described in Section 3.1.2.1.1.  Lastly, the entity should be documented to include what the entity is and potential approaches on how it could be collected to provide hints to content authors and tool implementers.
+When designing an OVAL Item Entity, a name should be selected that follows the naming conventions for XML Constructs ([Section 4.2.6](#4-2-6-object-state-and-item-entities)).  From there, an entity type must be selected from the OVAL System Characteristics Model (e.g.  <span style="font-family: 'Courier New'">oval-sc:EntityItemStringType</span>, <span style="font-family: 'Courier New'">oval-sc:EntityItemIntType</span>, <span style="font-family: 'Courier New'">oval-sc:EntityItemVersionType</span>, etc.) or an enumeration of string values must be created in the corresponding platform-specific OVAL System Characteristics Model.  If none of the existing entity types apply and an enumeration of string values is not appropriate then it may make sense to add a new datatype to the OVAL Language in accordance with [Section 4.2.8](#4-2-8-datatypes).   Next, the entity should be assigned a minOccurs=”0” and a maxOccurs=”1” or “unbounded” if multiple values may be present for a particular entity.  Every entity has a minOccurs=”0” so that tools can leave it out if they so choose (e.g. for optimization reasons, etc.).  It must be determined if the entity should be nillable.  This is driven by the design of the OVAL Object Entities and whether or not they are nillable which is described in [Section 3.1.2.1.1](#3-1-2-1-1-nillable-oval-object-entities).  Lastly, the entity should be documented to include what the entity is and potential approaches on how it could be collected to provide hints to content authors and tool implementers.
 
 #### 3.1.2 Designing an OVAL Object
-In the OVAL Language, the OVAL Object defines what posture attribute data should be collected off an endpoint for evaluation.  It does so by providing a set of OVAL Entities that uniquely identify a system structure on an endpoint (e.g. files, registry keys, processes, etc.) as well as potentially behaviors that further refine the set of OVAL Items to collect.  Within an OVAL Platform Extension Model, an OVAL Object must extend the abstract OVAL Definitions Model oval-def:ObjectType construct and provide documentation about how the OVAL Object works.  An OVAL Object may require zero or more entities to uniquely identify an OVAL Item.  If it has zero entities (e.g. win-def:passwordpolicy_test, ind-def:family_test, etc.), it means that there is only a single OVAL Item on the endpoint for that OVAL Object.  If this is the case, the oval-def:Set and oval-def:Filter constructs must not be included since there are no sets of OVAL Items to combine or filter.  On the other hand, if an OVAL Object has one or more entities, the oval-def:Set and oval-def:Filter must be included as well as a Schematron rule to ensure that any OVAL States that are referenced in filter constructs are of the correct type.  Lastly, an OVAL Object may optionally define a set of behaviors.  These behaviors are used to better direct one or more aspects of how the required posture attribute data is collected from the endpoint.  Below is the schema for the win-def:file_object which demonstrates a typical OVAL Object in the OVAL Language.
+In the OVAL Language, the OVAL Object defines what posture attribute data should be collected off an endpoint for evaluation.  It does so by providing a set of OVAL Entities that uniquely identify a system structure on an endpoint (e.g. files, registry keys, processes, etc.) as well as potentially behaviors that further refine the set of OVAL Items to collect.  Within an OVAL Platform Extension Model, an OVAL Object must extend the abstract OVAL Definitions Model <span style="font-family: 'Courier New'">oval-def:ObjectType</span> construct and provide documentation about how the OVAL Object works.  An OVAL Object may require zero or more entities to uniquely identify an OVAL Item.  If it has zero entities (e.g. <span style="font-family: 'Courier New'">win-def:passwordpolicy_test</span>, <span style="font-family: 'Courier New'">ind-def:family_test</span>, etc.), it means that there is only a single OVAL Item on the endpoint for that OVAL Object.  If this is the case, the <span style="font-family: 'Courier New'">oval-def:Set</span> and <span style="font-family: 'Courier New'">oval-def:Filter</span> constructs must not be included since there are no sets of OVAL Items to combine or filter.  On the other hand, if an OVAL Object has one or more entities, the <span style="font-family: 'Courier New'">oval-def:Set</span> and <span style="font-family: 'Courier New'">oval-def:Filter</span> must be included as well as a Schematron rule to ensure that any OVAL States that are referenced in filter constructs are of the correct type.  Lastly, an OVAL Object may optionally define a set of behaviors.  These behaviors are used to better direct one or more aspects of how the required posture attribute data is collected from the endpoint.  Below is the schema for the <span style="font-family: 'Courier New'">win-def:file_object</span> which demonstrates a typical OVAL Object in the OVAL Language.
 
 ```xml
 01<xsd:element name="file_object" substitutionGroup="oval-def:object">
@@ -435,7 +435,7 @@ In the OVAL Language, the OVAL Object defines what posture attribute data should
 47                                    </xsd:element>
 48                                    <xsd:element name="filename" type="oval-def:EntityObjectStringType" nillable="true">
 49                                        <xsd:annotation>
-50                                            <xsd:documentation>The filename element specifies the name of a file to evaluate. If the xsi:nil attribute is set to true, then the object being specified is the higher level directory object (not all the files in the directory). In this case, the filename element should not be used during collection and would result in the unique set of items being the directories themselves. For example, one would set xsi:nil to true if the desire was to test the attributes or permissions associated with a directory. Setting xsi:nil equal to true is different than using a .* pattern match, which says to collect every file under a given path.</xsd:documentation>
+50                                            <xsd:documentation>The filename element specifies the name of a file to evaluate. If the xsi:nil attribute is set to true, then the object being specified is the higher level directory object (not all the files in the directory). In this case, the filename element should not be used during collection and would result in the unique set of items being the directories themselves. For example, one would set xsi:nil to true if the desire was to test the attributes or permissions associated with a directory. Setting xsi:nil equal to true is different than using a \.\* pattern match, which says to collect every file under a given path.</xsd:documentation>
 51                                            ...
 52                                        </xsd:annotation>
 53                                    </xsd:element>
@@ -453,7 +453,7 @@ In the OVAL Language, the OVAL Object defines what posture attribute data should
 
 Truncated schema for win-def:file_object <sup id="a17">[17](#f17)</sup>
 
-Please consult the following table which details the modifications required to form a new OVAL Object using the sample schema.  For simplicity, the OVAL Object’s name “file” is replaced with “[*]”.
+Please consult the following table which details the modifications required to form a new OVAL Object using the sample schema.  For simplicity, the OVAL Object’s name “file” is replaced with “[\*]”.
 
 <table>
   <tr>
@@ -463,11 +463,11 @@ Please consult the following table which details the modifications required to f
   <tbody>
     <tr>
       <td>01</td>
-      <td>The name attribute is assigned a value of “[*]_object” in accordance with Section 4.2.3.</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute is assigned a value of “[\*]_object” in accordance with [Section 4.2.3](#4-2-3-objects).</td>
     </tr>
     <tr>
       <td>03</td>
-      <td>The documentation element describes how to drive the collection of metadata for the system structure that you wish to retrieve for this OVAL Object.  This may include information about the different methods of collection, scope of the collection, or examples of how the OVAL Object Entity values are formatted.</td>
+      <td>The <span style="font-family: 'Courier New'">documentation</span> element describes how to drive the collection of metadata for the system structure that you wish to retrieve for this OVAL Object.  This may include information about the different methods of collection, scope of the collection, or examples of how the OVAL Object Entity values are formatted.</td>
     </tr>
 	<tr>
       <td>05-17</td>
@@ -475,58 +475,58 @@ Please consult the following table which details the modifications required to f
     </tr>
     <tr>
       <td>19-21</td>
-      <td>The complexType … extension element will always be present as every OVAL Object extends the abstract oval-def:ObjectType construct.	  
-	  <br/><br/>In the case where an OVAL Object always references a single OVAL Item on an endpoint, the extension element should be empty.  Otherwise, it must contain the minimum elements required to uniquely identify an OVAL Item on the endpoint.</td>
+      <td>The <span style="font-family: 'Courier New'">complexType ... extension</span> element will always be present as every OVAL Object extends the abstract <span style="font-family: 'Courier New'">oval-def:ObjectType</span> construct.	  
+	  <br/><br/>In the case where an OVAL Object always references a single OVAL Item on an endpoint, the <span style="font-family: 'Courier New'">extension</span> element should be empty.  Otherwise, it must contain the minimum elements required to uniquely identify an OVAL Item on the endpoint.</td>
     </tr>
 	<tr>
       <td>23-25</td>
-      <td>The choice … set … sequence elements are included in all OVAL Objects that have the ability to reference more than one OVAL Item on an endpoint. The choice element enables an OVAL Object to either be the set of OVAL Items that results from combining multiple OVAL Objects using set operations or the set of OVAL Items determined by evaluating OVAL Behaviors, OVAL Object Entities, and OVAL Filters. </td>
+      <td>The <span style="font-family: 'Courier New'">choice ... set ... sequence</span> elements are included in all OVAL Objects that have the ability to reference more than one OVAL Item on an endpoint. The <span style="font-family: 'Courier New'">choice</span> element enables an OVAL Object to either be the set of OVAL Items that results from combining multiple OVAL Objects using set operations or the set of OVAL Items determined by evaluating OVAL Behaviors, OVAL Object Entities, and OVAL Filters. </td>
     </tr>
     <tr>
       <td>26</td>
-      <td>Some OVAL Objects permit the use of behaviors to govern endpoint collection.  The usage of behaviors should be well documented in the OVAL Object's documentation element(s).  Please see Section 3.1.2.1.3 for more information when implementing a new OVAL Behavior.</td>
+      <td>Some OVAL Objects permit the use of <span style="font-family: 'Courier New'">behaviors</span> to govern endpoint collection.  The usage of <span style="font-family: 'Courier New'">behaviors</span> should be well documented in the OVAL Object's <span style="font-family: 'Courier New'">documentation</span> element(s).  Please see [Section 3.1.2.1.3](#3-1-2-1-3-designing-oval-behaviors) for more information when implementing a new OVAL Behavior.</td>
     </tr>
 	<tr>
       <td>27</td>
-      <td>When there are multiple options for uniquely identifying OVAL Items on the endpoint, a choice element should be used to create an “exclusive OR” of the required entity groupings.  For example, in the win-def:file_object, a content author can choose between specifying the absolute path to the file in the filepath entity or can specify the path to a file using the separate path and file name entities.  Each option for specifying an OVAL Item on the endpoint should be clearly documented.  </td>
+      <td>When there are multiple options for uniquely identifying OVAL Items on the endpoint, a <span style="font-family: 'Courier New'">choice</span> element should be used to create an “exclusive OR” of the required entity groupings.  For example, in the <span style="font-family: 'Courier New'">win-def:file_object</span>, a content author can choose between specifying the absolute path to the file in the <span style="font-family: 'Courier New'">filepath</span> entity or can specify the path to a file using the separate path and file name entities.  Each option for specifying an OVAL Item on the endpoint should be clearly documented.  </td>
     </tr>
     <tr>
       <td>27-55</td>
-      <td>OVAL Object Entities are defined using an element with a unique name. Each entity declares one parameter with which the scope of the OVAL Item search on the endpoint can be defined. OVAL Object Entities may be of a common or custom defined type. Common OVAL datatypes are found in the oval:DatatypeEnumeration construct within the OVAL Common Model. These datatypes may be utilized with the available oval-def:EntityObject[…]Type types as defined in the OVAL Definitions Model.  
-	<br/><br/>The documentation element is used to define the constraints or patterns expected from the value when used. 
-	<br/><br/>Furthermore, OVAL Object Entities may be nillable. When an OVAL Object Entity is nillable, the expected interpretation of this value should be documented in the child documentation element.  For more information about nillable OVAL Object Entities, please see Section 3.1.2.1.1.
-	<br/><br/>Lastly, additional restrictions may be placed on OVAL Object Entities through embedded Schematron rules within an element.  For example, the filename entity in the win-def:file_object checks values for characters that are not permitted in Windows file names.  Please adhere to Schematron best practices when defining these rules.</td>
+      <td>OVAL Object Entities are defined using an <span style="font-family: 'Courier New'">element</span> with a unique name. Each entity declares one parameter with which the scope of the OVAL Item search on the endpoint can be defined. OVAL Object Entities may be of a common or custom defined <span style="font-family: 'Courier New'">type</span>. Common OVAL datatypes are found in the <span style="font-family: 'Courier New'">oval:DatatypeEnumeration</span> construct within the OVAL Common Model. These datatypes may be utilized with the available <span style="font-family: 'Courier New'">oval-def:EntityObject[...]Type</span> types as defined in the OVAL Definitions Model.  
+	<br/><br/>The <span style="font-family: 'Courier New'">documentation</span> element is used to define the constraints or patterns expected from the value when used. 
+	<br/><br/>Furthermore, OVAL Object Entities may be <span style="font-family: 'Courier New'">nillable</span>. When an OVAL Object Entity is <span style="font-family: 'Courier New'">nillable</span>, the expected interpretation of this value should be documented in the child documentation element.  For more information about <span style="font-family: 'Courier New'">nillable</span> OVAL Object Entities, please see [Section 3.1.2.1.1](#3-1-2-1-1-nillable-oval-object-entities).
+	<br/><br/>Lastly, additional restrictions may be placed on OVAL Object Entities through embedded Schematron rules within an element.  For example, the <span style="font-family: 'Courier New'">filename</span> entity in the <span style="font-family: 'Courier New'">win-def:file_object</span> checks values for characters that are not permitted in Windows file names.  Please adhere to Schematron best practices when defining these rules.</td>
     </tr>
 	<tr>
       <td>56</td>
-      <td>The filter construct permits the inclusion or exclusion of particular OVAL Items based on the set of OVAL State Entities specified in the referenced OVAL States.</td>
+      <td>The <span style="font-family: 'Courier New'">filter</span> construct permits the inclusion or exclusion of particular OVAL Items based on the set of OVAL State Entities specified in the referenced OVAL States.</td>
     </tr>
   </tbody>
 </table>
 
 **Design Principle: An OVAL Object SHOULD include the minimum set of OVAL Entities needed to uniquely identify an OVAL Item collected from an endpoint**
 
-When specified in an OVAL Definitions document, an OVAL Object needs to allow an OVAL content author to be able to specify that zero or more unique OVAL Items are to be collected.  As a result, the OVAL Object must specify the minimum set of entities required to be able to uniquely identify an OVAL Item on an endpoint.  Otherwise, an OVAL content author will not be able to handle the case where they want to collect just a single OVAL Item off of an endpoint.  An example where this is not followed was the original win-def:process_object and unix-def:process_object where it had content authors specify the command line used to start the process.  If two processes were created using the same command line, then a tool would collect two process_items and there would be no way to distinguish between the two OVAL Items at collection time outside of using an OVAL Object Filter.  As a result, the pid entity was introduced to the OVAL Object because the process identifier uniquely identifies a process on the endpoint.  A similar issue was encountered with the ind-def:environmentvariable_object and as a result the ind-def:environmentvariable58_object was introduced including the pid entity so that a tool would know from which process to pull the environment variable values from since each process has its own environment variables.  One last example related to this design principle involves the numerous tests in the Windows Platform Extension Model that used trustee names to identify user and group accounts for collecting the corresponding OVAL Items.  Unfortunately, using the trustee name was not sufficient as it did not uniquely identify an account on the endpoint (e.g. an account could be renamed to another account and the content would no longer work).  As a result, new OVAL Tests were introduced to drive OVAL Item collection based on security identifiers (SIDs) which uniquely identify a user or group account on the endpoint across name changes.
+When specified in an OVAL Definitions document, an OVAL Object needs to allow an OVAL content author to be able to specify that zero or more unique OVAL Items are to be collected.  As a result, the OVAL Object must specify the minimum set of entities required to be able to uniquely identify an OVAL Item on an endpoint.  Otherwise, an OVAL content author will not be able to handle the case where they want to collect just a single OVAL Item off of an endpoint.  An example where this is not followed was the original <span style="font-family: 'Courier New'">win-def:process_object</span> and <span style="font-family: 'Courier New'">unix-def:process_object</span> where it had content authors specify the command line used to start the process.  If two processes were created using the same command line, then a tool would collect two <span style="font-family: 'Courier New'">process_items</span> and there would be no way to distinguish between the two OVAL Items at collection time outside of using an OVAL Object Filter.  As a result, the <span style="font-family: 'Courier New'">pid</span> entity was introduced to the OVAL Object because the process identifier uniquely identifies a process on the endpoint.  A similar issue was encountered with the <span style="font-family: 'Courier New'">ind-def:environmentvariable_object</span> and as a result the <span style="font-family: 'Courier New'">ind-def:environmentvariable58_object</span> was introduced including the <span style="font-family: 'Courier New'">pid</span> entity so that a tool would know from which process to pull the environment variable values from since each process has its own environment variables.  One last example related to this design principle involves the numerous tests in the Windows Platform Extension Model that used trustee names to identify user and group accounts for collecting the corresponding OVAL Items.  Unfortunately, using the trustee name was not sufficient as it did not uniquely identify an account on the endpoint (e.g. an account could be renamed to another account and the content would no longer work).  As a result, new OVAL Tests were introduced to drive OVAL Item collection based on security identifiers (SIDs) which uniquely identify a user or group account on the endpoint across name changes.
 
 ##### 3.1.2.1 Designing OVAL Object Entities
-When designing an OVAL Object Entity, a name should be selected that follows the naming conventions for XML Constructs (Section 4.2.6).  From there, a type must be selected from the OVAL Definitions Model (e.g.  oval-def:EntityObjectStringType, oval-def:EntityObjectIntType, oval-sc:EntityObjectVersionType, etc.) or an enumeration of string values must be created in the corresponding Platform Extension Definitions Model (e.g. win-def:EntityObjectRegistryHiveType).  If none of the existing types apply and an enumeration of string values is not appropriate, it may make sense to add a new datatype to the OVAL Language in accordance with Section 4.2.8.   Next, the OVAL Object Entity should be assigned a minOccurs=”1” and a maxOccurs=”1”.  OVAL Object Entities are always mandatory.  Lastly, special considerations such as whether or not the entity is nillable or if there are restrictions on the allowable operations must be accounted for.  This is discussed more in the following sections.
+When designing an OVAL Object Entity, a name should be selected that follows the naming conventions for XML Constructs ([Section 4.2.6](#4-2-6-object-state-and-item-entities)).  From there, a type must be selected from the OVAL Definitions Model (e.g.  <span style="font-family: 'Courier New'">oval-def:EntityObjectStringType</span>, <span style="font-family: 'Courier New'">oval-def:EntityObjectIntType</span>, <span style="font-family: 'Courier New'">oval-sc:EntityObjectVersionType</span>, etc.) or an enumeration of string values must be created in the corresponding Platform Extension Definitions Model (e.g. <span style="font-family: 'Courier New'">win-def:EntityObjectRegistryHiveType</span>).  If none of the existing types apply and an enumeration of string values is not appropriate, it may make sense to add a new datatype to the OVAL Language in accordance with [Section 4.2.8](#4-2-8-datatypes).   Next, the OVAL Object Entity should be assigned a minOccurs=”1” and a maxOccurs=”1”.  OVAL Object Entities are always mandatory.  Lastly, special considerations such as whether or not the entity is nillable or if there are restrictions on the allowable operations must be accounted for.  This is discussed more in the following sections.
 
 ###### 3.1.2.1.1 Nillable OVAL Object Entities
 In some situations, there are special cases where an OVAL Object Entity does not need a value or it needs to be populated with a special value that may not be known in advance.  It is in these cases, where OVAL Object Entities should be made nillable.  Currently, there are a few uses cases, in the OVAL Language, for making an OVAL Object Entity nillable.
 
-1. *Specify Item Configuration*: The OVAL Object Entities are hierarchical in nature and the assessment involves only the higher-level entities.  Examples of this include the key and name entities in the win-def:registry_object, and the filename entity in the win-def:file_object and unix-def:file_object.
-2. *Introspection*: The OVAL Object Entity should receive a value that a content author would not know ahead of time.  Examples of this include the pid entity in the win-def:process58_object, unix-def:process58_object, and the ind-def:environmentvariable58_object where, when the entity is nilled, it receives the value of the process identifier of the tool’s current running process. 
-3. *Command Line Parameters*: The OVAL Object Entity represents a command line parameter and the command line parameter shouldn’t be passed to the tool.  Examples of this are the username, userpass, and directory_node entities in the macos-def:pwpolicy59_object.  However, given that we do not want to design OVAL Items after collection mechanisms or command line utilities, this use of a nillable OVAL Object Entity should be avoided as much as possible moving forward.
-4. *Don’t Care*: Indicates that the value of the OVAL Object Entity doesn’t matter.  Examples of this include the module_id and module_version entity in the win-def:cmdlet_object.
-5. *Special Purpose*: Indicates that something special, particular to the OVAL Object, should occur during the collection of OVAL Items.  An example of this is the source entity in the unix-def:gconf_object which instructs a tool to look up the preference key using the GConf daemon rather than a path to a XML file.
+1. *Specify Item Configuration*: The OVAL Object Entities are hierarchical in nature and the assessment involves only the higher-level entities.  Examples of this include the key and name entities in the win-def:registry_object, and the filename entity in the <span style="font-family: 'Courier New'">win-def:file_object</span> and <span style="font-family: 'Courier New'">unix-def:file_object</span>.
+2. *Introspection*: The OVAL Object Entity should receive a value that a content author would not know ahead of time.  Examples of this include the <span style="font-family: 'Courier New'">pid</span> entity in the <span style="font-family: 'Courier New'">win-def:process58_object</span>, <span style="font-family: 'Courier New'">unix-def:process58_object</span>, and the <span style="font-family: 'Courier New'">ind-def:environmentvariable58_object</span> where, when the entity is nilled, it receives the value of the process identifier of the tool’s current running process. 
+3. *Command Line Parameters*: The OVAL Object Entity represents a command line parameter and the command line parameter shouldn’t be passed to the tool.  Examples of this are the <span style="font-family: 'Courier New'">username</span>, <span style="font-family: 'Courier New'">userpass</span>, and <span style="font-family: 'Courier New'">directory_node</span> entities in the <span style="font-family: 'Courier New'">macos-def:pwpolicy59_object</span>.  However, given that we do not want to design OVAL Items after collection mechanisms or command line utilities, this use of a nillable OVAL Object Entity should be avoided as much as possible moving forward.
+4. *Don’t Care*: Indicates that the value of the OVAL Object Entity doesn’t matter.  Examples of this include the <span style="font-family: 'Courier New'">module_id</span> and <span style="font-family: 'Courier New'">module_version</span> entity in the <span style="font-family: 'Courier New'">win-def:cmdlet_object</span>.
+5. *Special Purpose*: Indicates that something special, particular to the OVAL Object, should occur during the collection of OVAL Items.  An example of this is the <span style="font-family: 'Courier New'">source</span> entity in the <span style="font-family: 'Courier New'">unix-def:gconf_object</span> which instructs a tool to look up the preference key using the GConf daemon rather than a path to a XML file.
 
 In the OVAL Language schema, an entity can be made nillable by setting the nillable attribute to “true”.  It is also important to include documentation that specifies what it means when an entity is nilled. Lastly, if an OVAL Object Entity is nillable, the corresponding OVAL Item Entity must also be nillable.
 
 ###### 3.1.2.1.2 Restricting Operations on OVAL Object Entities
-In some cases, it does not make sense to permit all operations on OVAL Object Entities (see the oval:OperationEnumeration).  The primary use case for this is when it is not feasible to enumerate all of the values for a particular OVAL Object Entity which is necessary to perform searching operations such as not equals, pattern match, etc.  An example of this is the wql entity in the win-def:wmi57_object because it is not feasible to enumerate all possible queries that a content author may want to specify.  As a result, the wql entity is restricted to the equals operation ensuring content authors specify an exact query.
+In some cases, it does not make sense to permit all operations on OVAL Object Entities (see the <span style="font-family: 'Courier New'">oval:OperationEnumeration</span>).  The primary use case for this is when it is not feasible to enumerate all of the values for a particular OVAL Object Entity which is necessary to perform searching operations such as not equals, pattern match, etc.  An example of this is the <span style="font-family: 'Courier New'">wql</span> entity in the <span style="font-family: 'Courier New'">win-def:wmi57_object</span> because it is not feasible to enumerate all possible queries that a content author may want to specify.  As a result, the <span style="font-family: 'Courier New'">wql</span> entity is restricted to the equals operation ensuring content authors specify an exact query.
 
 ###### 3.1.2.1.3 Designing OVAL Behaviors
-OVAL Behaviors define actions that can further specify the set of OVAL Items that match an OVAL Object.  OVAL Behaviors may be dependent on other OVAL Behaviors in an OVAL Object or they may operate independently.  In both cases, they are very specific to the OVAL Object and the particular system structure being collected.  Each OVAL Behavior should have a name consistent with its purpose and naming conventions (Section 4.2.3.1) as well as documentation that clearly specifies the possible values, how the behavior works, and boundary and error conditions.  With OVAL Behaviors, the documentation is the most important part because without it content authors and tool vendors may interpret it differently hurting the portability and interoperability among content and tools.
+OVAL Behaviors define actions that can further specify the set of OVAL Items that match an OVAL Object.  OVAL Behaviors may be dependent on other OVAL Behaviors in an OVAL Object or they may operate independently.  In both cases, they are very specific to the OVAL Object and the particular system structure being collected.  Each OVAL Behavior should have a name consistent with its purpose and naming conventions ([Section 4.2.3.1](#4-2-3-1-behaviors)) as well as documentation that clearly specifies the possible values, how the behavior works, and boundary and error conditions.  With OVAL Behaviors, the documentation is the most important part because without it content authors and tool vendors may interpret it differently hurting the portability and interoperability among content and tools.
 
 ```xml
 01<xsd:complexType name="FileBehaviors">
@@ -563,25 +563,25 @@ Please consult the following table which details the required modifications to f
   <tbody>
     <tr>
       <td>01</td>
-      <td>The name attribute would be assigned according to Section 4.1.9</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute would be assigned according to [Section 4.1.9](#4-1-9-behavior)</td>
     </tr>
     <tr>
       <td>06</td>
-      <td>Each Behavior is defined using an attribute construct with a unique name attribute. These values should adhere to the rules defined in Section 4.2.3.1.  The use attribute is set to “optional” since a default attribute value should always be defined.  The default attribute declares which value is supplied to the OVAL Behavior when not explicitly declared.</td>
+      <td>Each Behavior is defined using an <span style="font-family: 'Courier New'">attribute</span> construct with a unique <span style="font-family: 'Courier New'">name</span> attribute. These values should adhere to the rules defined in [Section 4.2.3.1](#4-2-3-1-behaviors).  The <span style="font-family: 'Courier New'">use</span> attribute is set to “optional” since a default attribute value should always be defined.  The <span style="font-family: 'Courier New'">default</span> attribute declares which value is supplied to the OVAL Behavior when not explicitly declared.</td>
     </tr>
 	<tr>
       <td>07-11</td>
-      <td>The documentation elements clarify all possible valid inputs for the given OVAL Behavior and how the values should impact the collection of OVAL Items from the endpoint.</td>
+      <td>The <span style="font-family: 'Courier New'">documentation</span> elements clarify all possible valid inputs for the given OVAL Behavior and how the values should impact the collection of OVAL Items from the endpoint.</td>
     </tr>
 	<tr>
       <td>12-17</td>
-      <td>Each OVAL Behavior should be defined to operate on a set of acceptable values.  If the set of acceptable values is more restrictive than that defined by the datatype of the behavior, a restriction construct should be used.  For example, the restriction construct may be used to specify a range of acceptable integers or acceptable enumeration of string values.  Please refer to other XML documentation on how to restrict datatypes.</td>
+      <td>Each OVAL Behavior should be defined to operate on a set of acceptable values.  If the set of acceptable values is more restrictive than that defined by the datatype of the behavior, a <span style="font-family: 'Courier New'">restriction</span> construct should be used.  For example, the <span style="font-family: 'Courier New'">restriction</span> construct may be used to specify a range of acceptable integers or acceptable enumeration of string values.  Please refer to other XML documentation on how to restrict datatypes.</td>
     </tr>
   </tbody>
 </table>
 
 #### 3.1.3 Designing an OVAL State
-Once the OVAL Item has been designed, creating the OVAL State is as simple as taking those entities, putting them in a state construct that extends the oval-def:StateType, updating the entity types to align with a type in the OVAL Definitions Model (e.g.  oval-def:EntityStateStringType, oval-def:EntityStateIntType, oval-def:EntityStateVersionType, etc.) and updating all the maxOccurs attributes so that they have a value of “1”.  All OVAL State Entities must have a maxOccurs of “1” because content authors are expected to use references to OVAL Variables in order to specify multiple values for an OVAL State Entity.  Lastly, the OVAL State construct documentation should be updated to specify what metadata can be assessed for a particular system structure.
+Once the OVAL Item has been designed, creating the OVAL State is as simple as taking those entities, putting them in a state construct that extends the <span style="font-family: 'Courier New'">oval-def:StateType</span>, updating the entity types to align with a type in the OVAL Definitions Model (e.g.  <span style="font-family: 'Courier New'">oval-def:EntityStateStringType</span>, <span style="font-family: 'Courier New'">oval-def:EntityStateIntType</span>, <span style="font-family: 'Courier New'">oval-def:EntityStateVersionType</span>, etc.) and updating all the maxOccurs attributes so that they have a value of “1”.  All OVAL State Entities must have a maxOccurs of “1” because content authors are expected to use references to OVAL Variables in order to specify multiple values for an OVAL State Entity.  Lastly, the OVAL State construct documentation should be updated to specify what metadata can be assessed for a particular system structure.
 
 ```xml
 01<xsd:element name="file_state" substitutionGroup="oval-def:state">
@@ -632,7 +632,7 @@ Once the OVAL Item has been designed, creating the OVAL State is as simple as ta
 
 Truncated schema for win-def:file_state<sup id="a19">[19](#f19)</sup>
 
-Please consult the following table which details the required modifications to form a new OVAL State using the sample schema.  For simplicity, this OVAL State’s name “file” is replaced with “[*]”.
+Please consult the following table which details the required modifications to form a new OVAL State using the sample schema.  For simplicity, this OVAL State’s name “file” is replaced with “[\*]”.
 
 <table>
   <tr>
@@ -642,24 +642,24 @@ Please consult the following table which details the required modifications to f
   <tbody>
     <tr>
       <td>01</td>
-      <td>The name attribute would be assigned the value of “[*]_state” according to Section 4.2.4.</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute would be assigned the value of “[\*]_state” according to [Section 4.2.4](#4-2-4-states).</td>
     </tr>
     <tr>
       <td>03</td>
-      <td>The documentation element for the OVAL State may provide an overview of the metadata that can be evaluated.  All documentation specific to a particular entity should be included in the documentation element for that OVAL State Entity.</td>
+      <td>The <span style="font-family: 'Courier New'">documentation</span> element for the OVAL State may provide an overview of the metadata that can be evaluated.  All documentation specific to a particular entity should be included in the <span style="font-family: 'Courier New'">documentation</span> element for that OVAL State Entity.</td>
     </tr>
 	<tr>
       <td>05-08</td>
-      <td>This complexType ... extension ... sequence elements ensure the OVAL State extends the oval-def:StateType construct and specifies the order in which the OVAL State Entities can appear in an OVAL State.  The order of the OVAL State Entities, in the OVAL State, must match the associated OVAL Item.</td>
+      <td>This <span style="font-family: 'Courier New'">complexType ... extension ... sequence</span> elements ensure the OVAL State extends the <span style="font-family: 'Courier New'">oval-def:StateType</span> construct and specifies the order in which the OVAL State Entities can appear in an OVAL State.  The order of the OVAL State Entities, in the OVAL State, must match the associated OVAL Item.</td>
     </tr>
 	<tr>
       <td>10</td>
-      <td>Each element should have a unique name.  The maxOccurs attribute on an OVAL State entity must be “1”.  Multiple values for a particular OVAL State Entity can be accommodated with references to OVAL Variables.  The minOccurs attribute should always be set to “0” to allow OVAL State entities to be omitted from evaluation.  The type attribute is used to specify what data format should be used to parse the specified OVAL State Entity value.  Common OVAL datatypes are found in the oval:DatatypeEnumeration construct within the OVAL Common Model.  These datatypes may be utilized with the available oval-def:EntityState[…]Type types as defined in the OVAL Definitions Model.  </td>
+      <td>Each <span style="font-family: 'Courier New'">element</span> should have a unique name.  The <span style="font-family: 'Courier New'">maxOccurs</span> attribute on an OVAL State entity must be “1”.  Multiple values for a particular OVAL State Entity can be accommodated with references to OVAL Variables.  The <span style="font-family: 'Courier New'">minOccurs</span> attribute should always be set to “0” to allow OVAL State entities to be omitted from evaluation.  The <span style="font-family: 'Courier New'">type</span> attribute is used to specify what data format should be used to parse the specified OVAL State Entity value.  Common OVAL datatypes are found in the oval:DatatypeEnumeration construct within the OVAL Common Model.  These datatypes may be utilized with the available <span style="font-family: 'Courier New'">oval-def:EntityState[...]Type</span> types as defined in the OVAL Definitions Model.  </td>
     </tr>
     <tr>
       <td>11-12</td>
-      <td>Each OVAL State Entity should include descriptive text in the documentation element that concisely describes what the element represents, and provide any units necessary for interpretation. Possible entity values should be explained when they may be ambiguous or represent special cases.
-	<br/><br/>Additional restrictions may be placed on an OVAL State Entity through embedded Schematron rules within an appinfo element. Please adhere to Schematron best practices when defining these rules.</td>
+      <td>Each OVAL State Entity should include descriptive text in the <span style="font-family: 'Courier New'">documentation</span> element that concisely describes what the element represents, and provide any units necessary for interpretation. Possible entity values should be explained when they may be ambiguous or represent special cases.
+	<br/><br/>Additional restrictions may be placed on an OVAL State Entity through embedded Schematron rules within an <span style="font-family: 'Courier New'">appinfo</span> element. Please adhere to Schematron best practices when defining these rules.</td>
     </tr>
 	<tr>
       <td>29,35</td>
@@ -671,7 +671,7 @@ Please consult the following table which details the required modifications to f
 ### 3.2 Designing an OVAL Function
 OVAL Functions provide content authors with constructs to perform repeatable and predictable operations on the values of OVAL Variables and OVAL Item Entities which can then be used as input into other OVAL Variables, OVAL Object Entities, or OVAL State Entities.  Such operations include arithmetic operations, string normalization, manipulation, and extraction operations, as well as other specialty operations that are useful in the assessment of an endpoint.  One example is the end function which enables content authors to ensure that all strings end with a particular sequence of characters.  This might be used to guarantee that all collected file paths are terminated with a trailing backslash before they are used in other constructs.
 
-OVAL Functions may work in a number of modes.  Each mode should be well documented and specify the expected inputs and outputs.  The modes may be controlled through attributes or by the number of inputs provided to the function.  For example, the arithmetic_operation attribute, in the arithmetic function, allows content authors to select between adding or multiplying the inputs whereas the mode in which the time_difference function operates varies based on the number of inputs.  If two inputs are provided, it computes the difference in time between the two inputs.  If one input is provided, it computes the difference in time between the current time and the input.  OVAL Functions must have a minimum of one input and there is no maximum number of inputs.  The maximum number of inputs is dependent on the needs of the OVAL Function.  Many OVAL Functions restrict the datatypes that they operate on.  In these cases, the restrictions should be enforced with Schematron rules that check datatypes associated with the different types of components associated with function inputs.  Lastly, all boundary conditions, error conditions, or other cases that require special interpretation should be documented for the OVAL Function. 
+OVAL Functions may work in a number of modes.  Each mode should be well documented and specify the expected inputs and outputs.  The modes may be controlled through attributes or by the number of inputs provided to the function.  For example, the <span style="font-family: 'Courier New'">arithmetic_operation</span> attribute, in the <span style="font-family: 'Courier New'">arithmetic</span> function, allows content authors to select between adding or multiplying the inputs whereas the mode in which the <span style="font-family: 'Courier New'">time_difference</span> function operates varies based on the number of inputs.  If two inputs are provided, it computes the difference in time between the two inputs.  If one input is provided, it computes the difference in time between the current time and the input.  OVAL Functions must have a minimum of one input and there is no maximum number of inputs.  The maximum number of inputs is dependent on the needs of the OVAL Function.  Many OVAL Functions restrict the datatypes that they operate on.  In these cases, the restrictions should be enforced with Schematron rules that check datatypes associated with the different types of components associated with function inputs.  Lastly, all boundary conditions, error conditions, or other cases that require special interpretation should be documented for the OVAL Function. 
 
 ```xml
 01<xsd:group name="FunctionGroup">
@@ -718,23 +718,23 @@ The following table highlights the key aspects to consider when creating a new O
   <tbody>
     <tr>
       <td>04</td>
-      <td>An element that specifies the OVAL Function name and type must be included in the oval-def:FunctionGroup choice element to declare it as a permitted OVAL Function in the OVAL Language.  Please see below for how to define an OVAL Function type.</td>
+      <td>An <span style="font-family: 'Courier New'">element</span> that specifies the OVAL Function <span style="font-family: 'Courier New'">name</span> and <span style="font-family: 'Courier New'">type</span> must be included in the <span style="font-family: 'Courier New'">oval-def:FunctionGroup</span> <span style="font-family: 'Courier New'">choice</span> element to declare it as a permitted OVAL Function in the OVAL Language.  Please see below for how to define an OVAL Function <span style="font-family: 'Courier New'">type</span>.</td>
     </tr>
     <tr>
       <td>09</td>
-      <td>The complexType element will define the OVAL Function type.  It should be assigned a name according to Section 4.1.11.</td>
+      <td>The <span style="font-family: 'Courier New'">complexType</span> element will define the OVAL Function type.  It should be assigned a <span style="font-family: 'Courier New'">name</span> according to [Section 4.1.11](#4-1-11-functions).</td>
     </tr>
 	<tr>
       <td>11-12</td>
-      <td>The documentation element should describe the expected operations of the OVAL Function. This description should encompass how the OVAL Function handles the variety of inputs accepted as well as the expected output.  It is important to explicitly define any limitations on accepted datatypes, or the presence of multiple component inputs.  Lastly, this description should also define how the OVAL Function fails if a result cannot be computed from the specified inputs.</td>
+      <td>The <span style="font-family: 'Courier New'">documentation</span> element should describe the expected operations of the OVAL Function. This description should encompass how the OVAL Function handles the variety of inputs accepted as well as the expected output.  It is important to explicitly define any limitations on accepted datatypes, or the presence of multiple component inputs.  Lastly, this description should also define how the OVAL Function fails if a result cannot be computed from the specified inputs.</td>
     </tr>
 	<tr>
       <td>25-27</td>
-      <td>Each OVAL Function includes a sequence element to define the acceptable input(s) to the OVAL Function.  OVAL Functions that require more than one input must set the maxOccurs attribute to a number greater than “1” or “unbounded” if it operates on an unlimited number of inputs.  It must also include a group element of type oval-def:ComponentGroup which allows oval-def:literal_component, oval-def:object_component, and oval-def:variable_component constructs to be specified as inputs to the OVAL Function.</td>
+      <td>Each OVAL Function includes a <span style="font-family: 'Courier New'">sequence</span> element to define the acceptable input(s) to the OVAL Function.  OVAL Functions that require more than one input must set the <span style="font-family: 'Courier New'">maxOccurs</span> attribute to a number greater than “1” or “unbounded” if it operates on an unlimited number of inputs.  It must also include a <span style="font-family: 'Courier New'">group</span> element of type <span style="font-family: 'Courier New'">oval-def:ComponentGroup</span> which allows <span style="font-family: 'Courier New'">oval-def:literal_component</span>, <span style="font-family: 'Courier New'">oval-def:object_component</span>, and <span style="font-family: 'Courier New'">oval-def:variable_component</span> constructs to be specified as inputs to the OVAL Function.</td>
     </tr>
     <tr>
       <td>28</td>
-      <td>The attribute element can provide additional context that can be used to drive the operation of an OVAL Function. Please make sure to define whether the use of the attribute is "optional" or "required". If the use attribute is set to "optional", a default value should be specified using the default attribute. This example provides an enumeration of acceptable arithmetic operations to be performed on the input values.</td>
+      <td>The <span style="font-family: 'Courier New'">attribute</span> element can provide additional context that can be used to drive the operation of an OVAL Function. Please make sure to define whether the <span style="font-family: 'Courier New'">use</span> of the attribute is "optional" or "required". If the <span style="font-family: 'Courier New'">use</span> attribute is set to "optional", a default value should be specified using the <span style="font-family: 'Courier New'">default</span> attribute. This example provides an enumeration of acceptable arithmetic operations to be performed on the input values.</td>
     </tr>
   </tbody>
 </table>
@@ -775,11 +775,11 @@ Please consult the following table which details the key features of the sample 
   <tbody>
     <tr>
       <td>03</td>
-      <td>The restriction element specifies the base datatype that the enumeration is restricted to.  Simple datatypes are restricted to xsd:string.</td>
+      <td>The <span style="font-family: 'Courier New'">restriction</span> element specifies the <span style="font-family: 'Courier New'">base</span> datatype that the enumeration is restricted to.  Simple datatypes are restricted to xsd:string.</td>
     </tr>
     <tr>
       <td>07-12, 18-23</td>
-      <td>The documentation element should describe the lexical space and value space of the datatype and should reference external specifications, when possible, to assist implementers. Permitted operations should also be well defined for the value space of the datatype along with error conditions. Two other good examples of a well-defined OVAL datatypes include ipv4_address and version.</td>
+      <td>The <span style="font-family: 'Courier New'">documentation</span> element should describe the lexical space and value space of the datatype and should reference external specifications, when possible, to assist implementers. Permitted operations should also be well defined for the value space of the datatype along with error conditions. Two other good examples of a well-defined OVAL datatypes include ipv4_address and version.</td>
     </tr>
   </tbody>
 </table>
@@ -829,27 +829,27 @@ new entity type construct.
   <tbody>
     <tr>
       <td>01</td>
-      <td>The name attribute would be assigned the value according to Section 4.1.12.</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute would be assigned the value according to [Section 4.1.12](#4-1-12-entities).</td>
     </tr>
     <tr>
       <td>02</td>
-      <td>The documentation element should describe the type of entity that is being defined.  In this case, type being defined is an OVAL State Entity that can contain an IP address value.  Specifically, an IPv4 address or an IPv6 address.</td>
+      <td>The <span style="font-family: 'Courier New'">documentation</span> element should describe the type of entity that is being defined.  In this case, type being defined is an OVAL State Entity that can contain an IP address value.  Specifically, an IPv4 address or an IPv6 address.</td>
     </tr>
 	<tr>
       <td>08</td>
-      <td>The restriction element specifies the base datatype that the enumeration is restricted to.  Simple datatypes are restricted to xsd:string.</td>
+      <td>The <span style="font-family: 'Courier New'">restriction</span> element specifies the <span style="font-family: 'Courier New'">base</span> datatype that the enumeration is restricted to.  Simple datatypes are restricted to <span style="font-family: 'Courier New'">xsd:string</span>.</td>
     </tr>
 	<tr>
       <td>10-17</td>
-      <td>The attribute element states that an OVAL State Entity of this type must specify the datatype attribute and it must have a value of either ipv4_address or ipv6_address.</td>
+      <td>The <span style="font-family: 'Courier New'">attribute</span> element states that an OVAL State Entity of this type must specify the datatype attribute and it must have a value of either ipv4_address or ipv6_address.</td>
     </tr>
   </tbody>
 </table>
 
 ### 3.4 Designing an OVAL Enumeration
-An OVAL Enumeration is a construct that restricts what would an arbitrary string value to a list of pre-defined literal values.  OVAL Enumerations are used to restrict the values of OVAL Object, State, and Item Entities such as the protocol entity in the win-def:port_object which restricts values to either to "tcp" or "udp" and attributes such as the recurse_direction behavior attribute which restricts values to either "up", "down", or "none".
+An OVAL Enumeration is a construct that restricts what would an arbitrary string value to a list of pre-defined literal values.  OVAL Enumerations are used to restrict the values of OVAL Object, State, and Item Entities such as the <span style="font-family: 'Courier New'">protocol</span> entity in the <span style="font-family: 'Courier New'">win-def:port_object</span> which restricts values to either to "tcp" or "udp" and attributes such as the <span style="font-family: 'Courier New'">recurse_direction</span> behavior attribute which restricts values to either "up", "down", or "none".
 
-Each value available within an OVAL Enumeration should have its own documentation that further clarifies the intent of that value.  Please refer to Section 4.2.9 when defining values for a new OVAL Enumeration.
+Each value available within an OVAL Enumeration should have its own documentation that further clarifies the intent of that value.  Please refer to [Section 4.2.9](#4-2-9-enumerations) when defining values for a new OVAL Enumeration.
 
 ```xml
 01<xsd:simpleType name="FilterActionEnumeration">
@@ -883,23 +883,23 @@ Please consult the following table which details the key features of the sample 
   <tbody>
     <tr>
       <td>01</td>
-      <td>The name attribute would be assigned the value according to Section 4.1.3.</td>
+      <td>The <span style="font-family: 'Courier New'">name</span> attribute would be assigned the value according to [Section 4.1.3](#4-1-3-enumerations).</td>
     </tr>
     <tr>
       <td>03</td>
-      <td>The documentation element should describe what this enumeration is intended to limit.  An appinfo element may be included to provide further information to a tool that intends to look for it such as an evaluation chart.  Please see the oval-def:SetOperatorEnumeration construct as an example where an XML transform may extract this information to generate formatted tables in an HTML rendering.</td>
+      <td>The <span style="font-family: 'Courier New'">documentation</span> element should describe what this enumeration is intended to limit.  An <span style="font-family: 'Courier New'">appinfo</span> element may be included to provide further information to a tool that intends to look for it such as an evaluation chart.  Please see the <span style="font-family: 'Courier New'">oval-def:SetOperatorEnumeration</span> construct as an example where an XML transform may extract this information to generate formatted tables in an HTML rendering.</td>
     </tr>
 	<tr>
       <td>05</td>
-      <td>The restriction element will declare the base datatype that this enumeration is restricted to.  Enumerations are generally a restriction of the common xsd:string datatype, but any datatype is appropriate.</td>
+      <td>The <span style="font-family: 'Courier New'">restriction</span> element will declare the <span style="font-family: 'Courier New'">base</span> datatype that this enumeration is restricted to.  Enumerations are generally a restriction of the common <span style="font-family: 'Courier New'">xsd:string</span> datatype, but any datatype is appropriate.</td>
     </tr>
 	<tr>
       <td>06,11</td>
-      <td>Each enumeration element defines one more value permitted by this enumeration. The value attribute explicitly declares the textual representation of a value in the enumeration.  Take care to ensure the value is facet compliant with the selected base datatype.</td>
+      <td>Each <span style="font-family: 'Courier New'">enumeration</span> element defines one more value permitted by this enumeration. The <span style="font-family: 'Courier New'">value</span> attribute explicitly declares the textual representation of a value in the enumeration.  Take care to ensure the value is facet compliant with the selected <span style="font-family: 'Courier New'">base</span> datatype.</td>
     </tr>
     <tr>
       <td>07-10</td>
-      <td>The annotation element will always be present to encapsulate any documentation elements.  Some enumeration values are sufficiently self-descriptive, yet it is still desirable to include documentation to provide additional information about the enumeration value.</td>
+      <td>The <span style="font-family: 'Courier New'">annotation</span> element will always be present to encapsulate any <span style="font-family: 'Courier New'">documentation</span> elements.  Some enumeration values are sufficiently self-descriptive, yet it is still desirable to include documentation to provide additional information about the enumeration value.</td>
     </tr>
   </tbody>
 </table>
@@ -924,13 +924,13 @@ For the most part, it is usually straight forward as to which model an extension
 Lastly, it should be noted that OVAL Tests, OVAL Objects, and OVAL States are always included in the appropriate Platform Extension Definitions Model whereas OVAL Items are always included in the appropriate Platform Extension System Characteristics Model. 
 
 #### 3.5.2 OVAL Function
-An OVAL Function provides a mechanism for manipulating values in the OVAL Language and can be arbitrarily nested within one another to perform multiple functions on a set of values.  New OVAL Functions can be created by extending the abstract oval-def:FunctionGroup construct.  OVAL Functions are always defined in the OVAL Definitions Model.
+An OVAL Function provides a mechanism for manipulating values in the OVAL Language and can be arbitrarily nested within one another to perform multiple functions on a set of values.  New OVAL Functions can be created by extending the abstract <span style="font-family: 'Courier New'">oval-def:FunctionGroup</span> construct.  OVAL Functions are always defined in the OVAL Definitions Model.
 
 #### 3.5.3 OVAL Datatype
-When adding a new datatype to the OVAL Language it should be added to either the oval:SimpleDatatypeEnumeration or the oval:ComplexDatatypeEnumeration in the OVAL Common Model.  The datatype should be added to the oval:SimpleDatatypeEnumeration if the value can be represented using a string value and it should be added to the oval:ComplexDatatypeEnumeration if the value requires structure like the record datatype. 
+When adding a new datatype to the OVAL Language it should be added to either the <span style="font-family: 'Courier New'">oval:SimpleDatatypeEnumeration</span> or the <span style="font-family: 'Courier New'">oval:ComplexDatatypeEnumeration</span> in the OVAL Common Model.  The datatype should be added to the <span style="font-family: 'Courier New'">oval:SimpleDatatypeEnumeration</span> if the value can be represented using a string value and it should be added to the <span style="font-family: 'Courier New'">oval:ComplexDatatypeEnumeration</span> if the value requires structure like the record datatype. 
 
 #### 3.5.4 Other
-The other two types of constructs that are commonly added to the OVAL Language are new entity datatypes to support new OVAL Datatypes and entity enumerations which restrict an entity to a specific set of values.  New entity datatypes are always added to the core data models.  Specifically, Entity[Object|State][…]Type types are added to the OVAL Definitions Model and EntityItem[…]Type types are added to the OVAL System Characteristics Model.  Enumeration values on the other hand are always added to the appropriate are added to the appropriate Platform Extension Definitions Model and Platform Extension System Characteristics Model.  For example, an enumeration that restricts registry key types to a specific set of values is defined in both the Windows Platform Extension Definitions Model (e.g. win-def:EntityStateRegistryTypeType) and the Windows Platform Extension System Characteristics Model (e.g. win-sc:EntityItemRegistryTypeType). 
+The other two types of constructs that are commonly added to the OVAL Language are new entity datatypes to support new OVAL Datatypes and entity enumerations which restrict an entity to a specific set of values.  New entity datatypes are always added to the core data models.  Specifically, <span style="font-family: 'Courier New'">Entity[Object|State][...]Type</span> types are added to the OVAL Definitions Model and EntityItem[…]Type types are added to the OVAL System Characteristics Model.  Enumeration values on the other hand are always added to the appropriate are added to the appropriate Platform Extension Definitions Model and Platform Extension System Characteristics Model.  For example, an enumeration that restricts registry key types to a specific set of values is defined in both the Windows Platform Extension Definitions Model (e.g. <span style="font-family: 'Courier New'">win-def:EntityStateRegistryTypeType</span>) and the Windows Platform Extension System Characteristics Model (e.g. <span style="font-family: 'Courier New'">win-sc:EntityItemRegistryTypeType</span>). 
 
 ## 4 Naming conventions
 The naming conventions for the OVAL Language can be broken up into two categories: (1) for the schema constructs and (2) for the names of the XML constructs that will be represented in instance documents.  The latter being more important since that is what most of the OVAL community and the tools will be interacting with.
@@ -939,10 +939,10 @@ The naming conventions for the OVAL Language can be broken up into two categorie
 The naming conventions for the constructs in the schema help facilitate an easy to read and extend language that is fairly self-explanatory and self-documenting.  With that said, there are also some quirks in the naming conventions for the schema, but, they have been pretty consistent over the years.
 
 #### 4.1.1 General Conventions
-* Schema constructs must be named using the CamelCase format with the first letter of each word being capitalized (e.g. oval:GeneratorType, oval-def:DefinitionsType, oval:SimpleDatatypeEnumeration, etc.).
+* Schema constructs must be named using the CamelCase format with the first letter of each word being capitalized (e.g. <span style="font-family: 'Courier New'">oval:GeneratorType</span>, <span style="font-family: 'Courier New'">oval-def:DefinitionsType</span>, <span style="font-family: 'Courier New'">oval:SimpleDatatypeEnumeration</span>, etc.).
 
 #### 4.1.2 Types
-* Constructs defining new types should have "Type" appended to the end of the name (e.g. oval-def:EntityStateIntType, oval-sc:EntityItemStringType, etc.).
+* Constructs defining new types should have "Type" appended to the end of the name (e.g. <span style="font-family: 'Courier New'">oval-def:EntityStateIntType</span>, <span style="font-family: 'Courier New'">oval-sc:EntityItemStringType</span>, etc.).
 
 #### 4.1.3 Enumerations
 * Enumerations defining new enumerations should have "Enumeration" appended to the end of the name.  
@@ -957,7 +957,7 @@ The naming conventions for the constructs in the schema help facilitate an easy 
 * sch:pattern identifiers should follow the format <prefix>_<description of pattern concatenated or separated by underscores>.  It may be beneficial for the community to settle on one convention moving forward.
 
 #### 4.1.7	Unique
-* Unique constructs (e.g. oval-def:UniqueAffectedPlatform)  need to be prefixed with "Unique".
+* Unique constructs (e.g. <span style="font-family: 'Courier New'">oval-def:UniqueAffectedPlatform</span>)  need to be prefixed with "Unique".
 
 #### 4.1.8	Component
 * Component elements should end with "ComponentType".
@@ -972,7 +972,7 @@ The naming conventions for the constructs in the schema help facilitate an easy 
 * Functions should end with "FunctionType".
 
 #### 4.1.12	Entities
-* Entity types should follow the format "Entity[Object|State|Item][AnySimple|Binary|Bool|…]Type".
+* Entity types should follow the format "Entity[Object|State|Item][AnySimple|Binary|Bool|...]Type".
 
 ### 4.2	XML Constructs
 For the most part, the XML constructs in the OVAL Language follow a short set of naming conventions.  While the conventions may have been applied at varying levels of strictness over the years, allowing for some inconsistencies, these conventions should be used moving forward even if there are examples of constructs in the language that break these conventions.
@@ -997,16 +997,16 @@ For the most part, the XML constructs in the OVAL Language follow a short set of
 * OVAL Item names must end with "_item".
 
 #### 4.2.6	Object, State, and Item Entities 
-* There are no special restrictions on naming conventions for OVAL Entities beyond what is specified in Section 4.2.1 General Conventions.
+* There are no special restrictions on naming conventions for OVAL Entities beyond what is specified in [Section 4.2.1 General Conventions](#4-2-1-general-conventions).
 
 #### 4.2.7	Functions
-* There are no special restrictions on naming conventions for OVAL Functions beyond what is specified in Section 7.2.1 General Conventions.
+* There are no special restrictions on naming conventions for OVAL Functions beyond what is specified in [Section 4.2.1 General Conventions](#4-2-1-general-conventions).
 
 #### 4.2.8	Datatypes
-* There are no special restrictions on naming conventions for OVAL Datatypes beyond what is specified in Section 4.2.1 General Conventions.
+* There are no special restrictions on naming conventions for OVAL Datatypes beyond what is specified in [Section 4.2.1 General Conventions](#4-2-1-general-conventions).
 
 #### 4.2.9	Enumerations
-* There are no special restrictions on naming conventions with respect to enumeration values.  Over the years, enumeration values have been expressed using all lowercase (e.g. linux-def:EntityStateRpmVerifyResultType defines "pass", "fail", etc.), all uppercase (e.g. win-def:EntityStateAuditType defines "AUDIT_FAILURE", "AUDIT_NONE", etc.) and have been separated using both underscores (e.g. win-def:EntityStateAuditType) and hyphens (e.g. oval-def:EntityStateHashTypeType defines "SHA-1", "SHA-224", etc.).  It may be beneficial for the community to settle on one convention moving forward.
+* There are no special restrictions on naming conventions with respect to enumeration values.  Over the years, enumeration values have been expressed using all lowercase (e.g. <span style="font-family: 'Courier New'">linux-def:EntityStateRpmVerifyResultType</span> defines "pass", "fail", etc.), all uppercase (e.g. <span style="font-family: 'Courier New'">win-def:EntityStateAuditType</span> defines "AUDIT_FAILURE", "AUDIT_NONE", etc.) and have been separated using both underscores (e.g. <span style="font-family: 'Courier New'">win-def:EntityStateAuditType</span>) and hyphens (e.g. <span style="font-family: 'Courier New'">oval-def:EntityStateHashTypeType</span> defines "SHA-1", "SHA-224", etc.).  It may be beneficial for the community to settle on one convention moving forward.
 
 ## 5 OVAL Extension Checklist
 The following sections provide a checklist to work through when extending the OVAL Language.
