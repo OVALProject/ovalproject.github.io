@@ -6,7 +6,7 @@ no_in_page_title: true
 <a name="top"></a>
 <h1>{{ page.title }}</h1>
 
-<p>This page gathers documents and tools for authoring content in the <a href="https://github.com/OVALProject/Language">OVAL Language</a> into a single location. As with any software language, your ability to successfully author OVAL content will continue to grow the more you work with the language. We encourage you to familiarize yourself with the information here as part of that process, and to offer feedback and ask any questions you might have on the <a href="http://oval.mitre.org/community/registration.html">OVAL Community Forums</a> as you continue the ongoing process of developing your knowledge of OVAL.</p>
+<p>This page gathers documents and tools for authoring content in the <a href="https://github.com/OVALProject/Language">OVAL Language</a> into a single location. As with any software language, your ability to successfully author OVAL content will continue to grow the more you work with the language. We encourage you to familiarize yourself with the information here as part of that process, and to offer feedback and ask any questions you might have on the <a href="https://oval.cisecurity.org/community/discuss">OVAL Community Forums</a> as you continue the ongoing process of developing your knowledge of OVAL.</p>
 
 <h3 style="margin-top:1.5em"><a name="prerequisites" id="prerequisites"></a>Prerequisites</h3>
 <ul>
@@ -45,8 +45,8 @@ no_in_page_title: true
 
 <h3 style="margin-top:1.5em"><a name="assistance" id="assistance"></a>Further Assistance</h3>
 
-<p><a href="http://oval.mitre.org/community/registration.html" style="font-weight:bold">OVAL Developer’s Forum</a> — Contact for questions about the OVAL Language itself.</p>
-<p><a href="http://oval.mitre.org/community/registration.html" style="font-weight:bold">OVAL Repository Forum</a> — Contact for questions about creating OVAL content.</p>
-<p><a href="mailto:oval@mitre.org" style="font-weight:bold">OVAL Team</a> — Contact directly for questions about the OVAL Language and/or about creating OVAL content.</p>
+<p><a href="http://lists.cisecurity.org/mailman/listinfo/oval_developer_lists.cisecurity.org" style="font-weight:bold">OVAL Developer’s Forum</a> — Contact for questions about the OVAL Language itself.</p>
+<p><a href="http://lists.cisecurity.org/mailman/listinfo/oval_repository_lists.cisecurity.org" style="font-weight:bold">OVAL Repository Forum</a> — Contact for questions about creating OVAL content.</p>
+<p><a href="mailto:oval@cisecurity.org" style="font-weight:bold">OVAL Team</a> — Contact directly for questions about the OVAL Language and/or about creating OVAL content.</p>
 
 <div align="right" style="margin:5px 0px 5px 0px; clear:right"><a href="http://oval.mitre.org/repository/about/authorsresources.html#top">Back to top</a></div>

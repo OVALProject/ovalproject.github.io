@@ -20,7 +20,7 @@ layout: flat
 
 <p>In an effort to guard against organizational bias, a single organization may be represented by a maximum of two individuals with the expectation that one individual would be focused on strategic direction and the other individual would be focused more on technical decisions.</p>
 
-<p>If you are interested in becoming an OVAL Board member email <a href="mailto:oval@mitre.org">oval@mitre.org</a>. Potential members should be participants in the Community before looking to join the OVAL Board. The OVAL Moderator has the final say regarding membership.</p>
+<p>If you are interested in becoming an OVAL Board member email <a href="mailto:oval@cisecurity.org">oval@cisecurity.org</a>. Potential members should be participants in the Community before looking to join the OVAL Board. The OVAL Moderator has the final say regarding membership.</p>
 
 <div class="row">
 	<a name="upcoming_meetings"></a>
