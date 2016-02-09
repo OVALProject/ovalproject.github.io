@@ -117,7 +117,7 @@ no_in_page_title: true
 					<tr>
 						<td>
 						<a href="http://www.cisecurity.org/" target="_blank">Center for Internet Security</a>
-						<div class="panel-body-sm">Blake Frantz<br>Adam Montville</div>
+						<div class="panel-body-sm">Adam Montville<br>William Munyan</div>
 						</td>
 					</tr>
 					<tr>
@@ -141,7 +141,7 @@ no_in_page_title: true
 					<tr>
 						<td>
 						<div class="panel-body-sm"><strong>Individual</strong></div>
-						<div class="panel-body-sm">William Munyan</div>
+						<div class="panel-body-sm">Blake Frantz</div>
 						<div class="panel-body-sm">Nils Puhlmann</div>
 						</td>
 					</tr>
