@@ -123,7 +123,7 @@ no_in_page_title: true
 					<tr>
 						<td>
 						<a href="http://www.dtcc.com/" target="_blank">Depository Trust &amp; Clearing Corporation (DTCC)</a>
-						<div class="panel-body-sm">Aharon Chernin</div>
+						<div class="panel-body-sm">Dale Rich</div>
 						</td>
 					</tr>
 					<tr>
