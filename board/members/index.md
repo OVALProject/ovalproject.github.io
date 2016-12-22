@@ -58,7 +58,7 @@ no_in_page_title: true
 					</tr>
 					<tr>
 						<td>
-						<a href="http://joval.org/" target="_blank">jOVAL.org</a>
+						<a href="http://joval.org/" target="_blank">Joval Continuous Monitoring</a>
 						<div class="panel-body-sm">David Solin</div>
 						</td>
 					</tr>
