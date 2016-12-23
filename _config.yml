@@ -1,6 +1,6 @@
 name: OVAL Docs
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 copyright: The MITRE Corporation
 
