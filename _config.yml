@@ -1,5 +1,5 @@
 name: OVAL Docs
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 
 copyright: The MITRE Corporation
