@@ -105,7 +105,7 @@ no_in_page_title: true
 						</td>
 					</tr>
 				</table>
-			</div>
+			
 		</div>
 	</div>
 	<div class="col-md-4">
