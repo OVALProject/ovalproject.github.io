@@ -3,7 +3,7 @@ title: OVAL Board members
 layout: flat
 no_in_page_title: true
 ---
-        <a name="top"></a>
+       <a name="top"></a>
         <h1>{{ page.title }}</h1>
         <div class="row">
             <div class="col-md-12 text-center"  style="border-top:1px solid;border-bottom:1px solid">
@@ -128,14 +128,14 @@ no_in_page_title: true
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="panel-body-sm"><a href="http://www.rockportsystems.com/" target="_blank">Rockport Systems</a></div>
-                                        <div class="panel-body-sm">Carl Banzhof</div>
+                                    <a href="http://www.rockportsystems.com/" target="_blank">Rockport Systems</a>
+                                    <div class="panel-body-sm">Carl Banzhof</div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="panel-body-sm"><a href="https://www.unifiedcompliance.com/" target="_blank">Unified Compliance</a></div>
-                                        <div class="panel-body-sm">Steven Piliero</div>
+                                    <a href="https://www.unifiedcompliance.com/" target="_blank">Unified Compliance</a>
+                                    <div class="panel-body-sm">Steven Piliero</div>
                                 </td>
                             </tr>
                             <tr>
@@ -183,8 +183,8 @@ no_in_page_title: true
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="panel-body-sm"><a href="http://www.spawar.navy.mil/" target="_blank">SPAWAR, U.S. Navy</a></div>
-                                        <div class="panel-body-sm">Jack Vander Pol</div>
+                                    <a href="http://www.spawar.navy.mil/" target="_blank">SPAWAR, U.S. Navy</a>
+                                    <div class="panel-body-sm">Jack Vander Pol</div>
                                 </td>
                             </tr>
                         </table>
@@ -246,4 +246,3 @@ no_in_page_title: true
             </div>
         </div>
         <div style="float:right"><a class="btn btn-link" href="#top">Back to Top</a></div>
-        
