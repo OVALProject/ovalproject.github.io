@@ -105,7 +105,7 @@ no_in_page_title: true
 						</td>
 					</tr>
 				</table>
-			</div>		
+			</div>
 		</div>
 	</div>
 	<div class="col-md-4">
@@ -205,8 +205,7 @@ no_in_page_title: true
 		</div>
 	</div>
 </div>
-<div style="float:right"><a class="btn btn-link" href="#top">Back to Top</a>
-</div>
+<div style="float:right"><a class="btn btn-link" href="#top">Back to Top</a></div>
 <div class="row">
 <a name="past_members"></a>
 <h2>Past Members</h2>
