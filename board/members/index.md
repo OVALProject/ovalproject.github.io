@@ -35,7 +35,7 @@ no_in_page_title: true
 					<tr>
 						<td>
 						<a href="http://www.hp.com/country/us/en/uc/welcome.html" target="_blank">Hewlett-Packard Development Company, L.P.</a>
-						<div class="panel-body-sm">Chandan M C<br/>Evani Prasad </div>
+						<div class="panel-body-sm">Chandan M C<br>Evani Prasad </div>
 						</td>
 					</tr>
 					<tr>
@@ -108,6 +108,8 @@ no_in_page_title: true
 			</div>
 		</div>
 	</div>
+</div>
+<div class="row">
 	<div class="col-md-4">
 		<a name="other_experts"></a>
 		<div class="panel panel-primary">
