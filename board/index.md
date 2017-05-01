@@ -35,14 +35,14 @@ layout: flat
 	<div class="col-sm-6">
 		<div class="well">
 			<div class="panel-body">
-				<p>View current, emeritus, and previous OVAL Board members</p><a class="btn btn-primary role="button" href="members">View OVAL Board members »</a>
+				<p>View current, emeritus, and previous OVAL Board members</p><a class="btn btn-primary" role="button" href="members">View OVAL Board members »</a>
 			</div>
 		</div>
 	</div>
 	<div class="col-sm-6">
 		<div class="well">
 			<div class="panel-body">
-				<p>View OVAL Board process documentation for participating as a member of the OVAL Board, Board voting, and managing the OVAL Board.</p><a class="btn btn-primary role="button" href="processes">View process documentation »</a>
+				<p>View OVAL Board process documentation for participating as a member of the OVAL Board, Board voting, and managing the OVAL Board.</p><a class="btn btn-primary" role="button" href="processes">View process documentation »</a>
 			</div>
 		</div>
 	</div>
