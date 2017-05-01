@@ -108,8 +108,6 @@ no_in_page_title: true
 			</div>
 		</div>
 	</div>
-</div>
-<div class="row">
 	<div class="col-md-4">
 		<a name="other_experts"></a>
 		<div class="panel panel-primary">
