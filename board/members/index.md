@@ -128,13 +128,13 @@ no_in_page_title: true
 					</tr>
 					<tr>
 						<td>
-						<div class="panel-body-sm"><a href="http://www.rockportsystems.com/" target="_blank">Rockport Systems</a>
+						<a href="http://www.rockportsystems.com/" target="_blank">Rockport Systems</a>
 						<div class="panel-body-sm">Carl Banzhof</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
-						<div class="panel-body-sm"><a href="https://www.unifiedcompliance.com/" target="_blank">Unified Compliance</a>
+						<a href="https://www.unifiedcompliance.com/" target="_blank">Unified Compliance</a>
 						<div class="panel-body-sm">Steven Piliero</div>
 						</td>
 					</tr>
@@ -183,7 +183,7 @@ no_in_page_title: true
 					</tr>
 					<tr>
 						<td>
-						<div class="panel-body-sm"><a href="http://www.spawar.navy.mil/" target="_blank">SPAWAR, U.S. Navy</a>
+						<a href="http://www.spawar.navy.mil/" target="_blank">SPAWAR, U.S. Navy</a>
 						<div class="panel-body-sm">Jack Vander Pol</div>
 						</td>
 					</tr>
