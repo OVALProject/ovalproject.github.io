@@ -197,7 +197,7 @@ no_in_page_title: true
 				<table class="table table-striped">
 					<tr>
 						<td>
-						<a href="http://www.mitre.org/" target="_blank">The MITRE Corporation</a>
+						<a href="http://www.cisecurity.org/" target="_blank">Center for Internet Security</a>
 						</td>
 					</tr>
 				</table>
