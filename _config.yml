@@ -2,7 +2,7 @@ name: OVAL Docs
 markdown: kramdown
 highlighter: rouge
 
-copyright: The MITRE Corporation
+copyright: Center for Internet Security
 
 exclude: ['Gemfile', 'Gemfile.lock', 'LICENSE', 'README.md']
 

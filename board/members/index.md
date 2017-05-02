@@ -35,7 +35,7 @@ no_in_page_title: true
 					<tr>
 						<td>
 						<a href="http://www.hp.com/country/us/en/uc/welcome.html" target="_blank">Hewlett-Packard Development Company, L.P.</a>
-						<div class="panel-body-sm">Chandan M C<br>Evani Prasad </div>
+						<div class="panel-body-sm">Chandan M C</div>
 						</td>
 					</tr>
 					<tr>
@@ -164,7 +164,7 @@ no_in_page_title: true
 					<tr>
 						<td>
 						<a href="http://www.redhat.com/" target="_blank">Red Hat, Inc.</a>
-						<div class="panel-body-sm">Steve Grubb<br>Kurt Seifried</div>
+						<div class="panel-body-sm">Martin Preisler<br>Kurt Seifried</div>
 						</td>
 					</tr>
 				</table>
