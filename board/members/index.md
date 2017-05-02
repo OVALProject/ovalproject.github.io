@@ -52,7 +52,7 @@ no_in_page_title: true
 					</tr>
 					<tr>
 						<td>
-						<a href="http://www.intel.com/" target="_blank">Intel Corporation</a>
+						<a href="http://www.McAfee.com/" target="_blank">McAfee</a>
 						<div class="panel-body-sm">Kent Landfield</div>
 						</td>
 					</tr>
