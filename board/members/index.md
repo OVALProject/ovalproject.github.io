@@ -219,6 +219,7 @@ no_in_page_title: true
 					<tr><td>Mark Cox</td></tr>
 					<tr><td>Javier Fernandez-Sanguino</td></tr>
 					<tr><td>Robert Hollis</td></tr>
+					<tr><td>Matt Hansbury</td></tr>
 				</table>
 			</div>
 		</div>
